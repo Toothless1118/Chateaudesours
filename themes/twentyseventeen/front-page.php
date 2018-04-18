@@ -177,13 +177,10 @@ get_header(); ?>
 			</div>
 		</article>
 	</div>
-	<div class="logo-breakdown">
+	<!-- <div class="logo-breakdown">
 		<h2>The Brand</h2>
-		<!--[if gte IE 9]><!-->
 		<svg class="full-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-2375.8 -908 5151.6 2216" xml:space="preserve">
-			<!--contents scripted in -->
 		</svg>
-		<!--<![endif]-->
 
 		<ul>
 			<li class="thistle">
@@ -214,7 +211,7 @@ get_header(); ?>
 			</span>
 			The <em>ampersand (&amp;)</em> in our name <em>reflects</em> our belief in the pairing of <em>people and place</em>, and the close collaboration of the two <em>necessary to grow truly fine wines</em>.
 		</p>
-	</div>
+	</div> -->
 </section>
 
 <section id="the-vines" class="yield fullscreen parallax">
@@ -336,15 +333,11 @@ get_header(); ?>
 <section class="notice">
 	<article>
 		<div>
-			<h1>Share our Journey</h1>
-			<p>We look forward to <em>sharing our story</em> with you <em>leading up to</em> our official opening in the <em>spring of 2017</em>.</p>
-			<p>You can keep up to date with our progress, and learn more about our vineyards and wines by following us <a href="https://twitter.com/chateaudesours">@lwwines on Twitter</a> and <a href="http://instagram.com/LWwines">lwwines on Instagram</a>. You should also <a href="http://eepurl.com/QdSHz">subscribe to our newsletter</a> and get an inside look at our vineyards and winemaking. It is our hope that by the time you and your friends uncork your first bottle of Lightfoot &amp; Wolfville, you'll know a little (or a lot!) about what's gone into making it.<br><br>
-			Cheers,<br>
-			Dannie Bergmann CEO of Château de Sours
-			<span class="signature">
-				<img src="<?php echo get_theme_file_uri('/assets/images/lightfoot-signatures.svg');?>" alt="Michael and Jocelyn Lightfoot signatures">
-			</span>
-			</p>
+			<h1>The Winery</h1>
+			<p>Standing at heart of our vineyards is our winery which has an annual production capacity of 650,000 bottles of wine and beneath it is a labyrinth of caves which are used for the patient storage and gentle aging for some of our wines.</p>
+			<p>In 2008 we upgraded and replaced most of the day-to-day small equipment, pumps and presses and converted the existing winery into a rosé only cellar, installing new cooling, electrical and hydraulic systems, as well as a new fruit reception and a 250HL Bucher Vaslin Inertys press to produce our world famous rosé wines. Then in the summer of 2011 we finally completed the building of the new winery including a completely new red fermentation cellar and barrel hall, as well as the renovation of other existing buildings, creating a new white fermentation cellar and barrel hall.</p>
+			<p>We created a new 'state-of-the-art' and fully equipped laboratory, which now allows us to carry out an extensive amount of valuable first-hand and on-site research and analysis, whilst we continue to work with other external experts including SARCO in Bordeaux to ensure that we are completely up-to-date on all matters.</p>
+			<p>We also significantly upgraded and enhanced all of our dry materials handling and storage facilities and put in place comprehensive systems and procedures so that we now have complete control of all aspects of the finished wine management.</p>
 		</div>
 	</article>
 </section>

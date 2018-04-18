@@ -1785,7 +1785,7 @@ body.press {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: url(assets/images/logo-compact-watermark.svg) center 5% no-repeat;
+	background: url(assets/images/logo-compact-watermark.png) center 5% no-repeat;
 	background-size: 600px auto;
 	z-index: -1;
 	opacity: .15
@@ -3058,7 +3058,7 @@ body.press {
 	.home main>section#the-name .intro h1+p {
 		padding: 2em 0 0;
 		font-size: 1.75em;
-		background: url(assets/images/brand-elements.svg) center -7.75em no-repeat;
+		/* background: url(assets/images/brand-elements.svg) center -7.75em no-repeat; */
 		background-size: 9.5625em 12.375em
 	}
 	.home main>section#the-name article {
@@ -3251,13 +3251,14 @@ body.press {
 		padding: 0;
 		height: 6em;
 		margin: 0 auto;
-		background: url(assets/images/logo.gif) center center no-repeat
+		background: url(assets/images/logo-main.png) center center no-repeat;
+		background-size: contain;
 	}
 	.press main>section#press-intro .intro h1+p {
 		margin: .75em 0 0;
 		padding: 1.5em 0 0;
 		font-size: 1.75em;
-		background: url(assets/images/brand-elements.svg) center -2.5em no-repeat;
+		/* background: url(assets/images/brand-elements.svg) center -2.5em no-repeat; */
 		background-size: 8.128125em 10.51875em
 	}
 	.press main>section#press-intro article {
@@ -3414,7 +3415,7 @@ body.press {
 		right: 0;
 		width: 50em;
 		height: 50em;
-		background: url(assets/images/logo-compact-watermark.svg) 10% 10% no-repeat;
+		background: url(assets/images/logo-compact-watermark.png) 10% 10% no-repeat;
 		background-size: 200%;
 		opacity: .05
 	}
@@ -3463,7 +3464,7 @@ body.press {
 @media only screen and (min-width: 1025px) {
 	body>header.collapsable {
 		padding: 8% 1em 5%;
-		background: url(assets/images/logo-compact-watermark-green.svg) center 180% no-repeat #231f20;
+		background: url(assets/images/logo-compact-watermark-green.png) center 180% no-repeat #231f20;
 		background-size: 50em auto
 	}
 	footer nav[role=navigation] {
