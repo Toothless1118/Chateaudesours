@@ -1,0 +1,4099 @@
+/*
+Theme Name: Twenty Seventeen
+Theme URI: https://wordpress.org/themes/twentyseventeen/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Twenty Seventeen brings your site to life with header video and immersive featured images. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.
+Version: 1.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentyseventeen
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+h1 .sans,
+sub,
+sup {
+	position: relative
+}
+tbody th,
+td {
+	text-align: left
+}
+button,
+form {
+	overflow: visible
+}
+iframe,
+img,
+legend {
+	border: 0
+}
+pre,
+textarea {
+	overflow: auto
+}
+.readmore,
+h4,
+h5,
+input,
+nav[role=navigation] ul li a,
+p em,
+select,
+textarea {
+	text-transform: uppercase
+}
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block
+}
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline
+}
+audio:not([controls]) {
+	display: none;
+	height: 0
+}
+[hidden],
+template {
+	display: none
+}
+a {
+	background-color: transparent;
+	color: #A19589
+}
+a:active,
+a:hover {
+	outline: 0
+}
+abbr[title] {
+	border-bottom: 1px dotted
+}
+b,
+optgroup,
+strong {
+	font-weight: 700
+}
+dfn {
+	font-style: italic
+}
+mark {
+	background: #ff0;
+	color: #000
+}
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline
+}
+sup {
+	top: -.5em
+}
+sub {
+	bottom: -.25em
+}
+svg:not(:root) {
+	overflow: hidden
+}
+hr {
+	box-sizing: content-box;
+	height: 0
+}
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0
+}
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+	-webkit-appearance: button;
+	cursor: pointer
+}
+button[disabled],
+html input[disabled] {
+	cursor: default
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0
+}
+input[type=checkbox],
+input[type=radio] {
+	box-sizing: border-box;
+	padding: 0
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	height: auto
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	box-sizing: content-box
+}
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+	-webkit-appearance: none
+}
+fieldset {
+	border: 1px solid silver;
+	margin: 0 2px;
+	padding: .35em .625em .75em
+}
+::-moz-selection {
+	background: #a1a73a;
+	color: #fff;
+	text-shadow: none
+}
+::selection {
+	background: #a1a73a;
+	color: #fff;
+	text-shadow: none
+}
+body {
+	margin: 0;
+	font-family: clavo, Georgia, serif;
+	font-size: 1em;
+	line-height: 1.5;
+	color: #4b4c44
+}
+a:visited {
+	color: #999
+}
+a:focus,
+a:hover {
+	text-decoration: none
+}
+a:active {
+	color: #897c6e
+}
+a[href^="tel:"] {
+	border-bottom: 1px dotted #A19589
+}
+h1 {
+	font-size: 2em
+}
+h2 {
+	font-size: 1.5em
+}
+h3 {
+	font-size: 1.25em
+}
+h4,
+h5,
+h6 {
+	font-size: 1em
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: left;
+	margin: 1em 0 .25em;
+	line-height: 1.125;
+	font-weight: 500
+}
+h1+h2,
+h1:first-child,
+h2+h3,
+h3+h4,
+h4+h5,
+h5+h6 {
+	margin-top: 0
+}
+.sans {
+	display: block;
+	font-size: .55em;
+	font-family: proxima-nova, Arial, sans-serif
+}
+figure.quote blockquote,
+tbody th {
+	font-family: clavo, Georgia, serif
+}
+h1 .sans {
+	display: inline-block;
+	background: #FFF;
+	padding: 0 .5em
+}
+h1 .sans:after,
+h1 .sans:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: .5em;
+	left: -2em;
+	width: 2em;
+	height: 1px;
+	background: #999;
+	z-index: 0
+}
+h1 .sans:after {
+	left: auto;
+	right: -2em
+}
+h1 .sans+span {
+	display: block
+}
+abbr,
+caption,
+dialog,
+dl,
+small {
+	font-size: .75em
+}
+ol,
+ul {
+	margin: 1em 0;
+	padding-left: 2em
+}
+li ol,
+li ul {
+	margin: 0;
+	padding-left: 1em
+}
+p {
+	word-spacing: 0;
+	margin-bottom: 1em
+}
+p em {
+	font-style: normal
+}
+p+p {
+	text-indent: 0
+}
+dialog,
+dl,
+ol,
+ul {
+	margin-top: 0
+}
+figure {
+	margin: 1.5em 0
+}
+figure img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 0 .25em
+}
+figure figcaption {
+	color: #999;
+	font-size: .8125em;
+	text-align: center
+}
+figure.quote blockquote {
+	margin: 0;
+	line-height: 1.5;
+	font-style: italic;
+	color: #333
+}
+figure.quote blockquote p,
+figure.quote blockquote p:first-of-type {
+	font-size: 1em;
+	margin: .5em 0
+}
+fieldset,
+table {
+	margin-bottom: 1em
+}
+figure.quote figcaption {
+	text-align: left;
+	font-style: normal
+}
+figure>br,
+figure>p {
+	display: none
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	border-top: solid 1px #f0f0f0
+}
+td,
+th {
+	padding: .5em .5em .25em;
+	vertical-align: top
+}
+tr {
+	border-bottom: solid 1px #f0f0f0
+}
+th {
+	text-align: center
+}
+.info figure figcaption p,
+.posts .badge,
+.posts .postmetadata,
+.scroll-tip,
+footer .copyright,
+input,
+select,
+textarea {
+	font-family: proxima-nova, Arial, sans-serif
+}
+legend {
+	padding: 0 .5em;
+	font-size: .75em
+}
+label {
+	line-height: 1;
+	display: inline-block;
+	width: 100%
+}
+input,
+select,
+textarea {
+	box-sizing: border-box;
+	max-width: 100%;
+	margin-bottom: .5em;
+	line-height: 1;
+	border: 1px solid #A19589;
+	background: #231f20;
+	letter-spacing: .1em;
+	color: #A19589;
+	-webkit-appearance: none;
+	border-radius: 0
+}
+input:focus,
+select:focus,
+textarea:focus {
+	outline: #A19589 solid 1px
+}
+input::-webkit-input-placeholder,
+select::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: #A19589
+}
+input:-moz-placeholder,
+select:-moz-placeholder,
+textarea:-moz-placeholder {
+	color: #A19589
+}
+input::-moz-placeholder,
+select::-moz-placeholder,
+textarea::-moz-placeholder {
+	color: #A19589
+}
+input:-ms-input-placeholder,
+select:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	color: #A19589
+}
+input[type=text],
+input[type=password],
+input[type=select],
+input[type=url],
+input[type=tel],
+input[type=email],
+input[type=date],
+input[type=datetime],
+input[type=month],
+input[type=week],
+input[type=time],
+input[type=range],
+input[type=color],
+input[type=number],
+input[type=search] {
+	padding: .75em 1em .5em;
+	font-size: .875em;
+	line-height: 1;
+	border: 1px solid #999
+}
+input[type=checkbox],
+input[type=radio] {
+	vertical-align: top;
+	margin: .25em .5em 0 0
+}
+input[type=file] {
+	max-width: 16em;
+	overflow: hidden
+}
+.button,
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+	display: inline-block;
+	padding: .5em 1.5em;
+	background: #A19589;
+	border: 1px solid #A19589;
+	color: #333;
+	box-sizing: border-box;
+	font-family: proxima-nova, Arial, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	text-decoration: none;
+	line-height: 1.5
+}
+.button:visited,
+button:visited,
+input[type=button]:visited,
+input[type=reset]:visited,
+input[type=submit]:visited {
+	color: #333
+}
+.button.white:visited,
+.button:focus,
+.button:hover,
+button.white:visited,
+button:focus,
+button:hover,
+input[type=button].white:visited,
+input[type=button]:focus,
+input[type=button]:hover,
+input[type=reset].white:visited,
+input[type=reset]:focus,
+input[type=reset]:hover,
+input[type=submit].white:visited,
+input[type=submit]:focus,
+input[type=submit]:hover {
+	color: #FFF
+}
+.button:focus,
+button:focus,
+input[type=button]:focus,
+input[type=reset]:focus,
+input[type=submit]:focus {
+	outline: #000 dotted 1px
+}
+.button:active,
+button:active,
+input[type=button]:active,
+input[type=reset]:active,
+input[type=submit]:active {
+	box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, .75)
+}
+.button.white,
+button.white,
+input[type=button].white,
+input[type=reset].white,
+input[type=submit].white {
+	border-color: #FFF;
+	border-width: 2px;
+	color: #FFF;
+	font-weight: 700;
+	background: 0 0
+}
+.button.white:hover,
+button.white:hover,
+input[type=button].white:hover,
+input[type=reset].white:hover,
+input[type=submit].white:hover {
+	background: #FFF;
+	color: #4b4c44;
+	text-shadow: none
+}
+textarea {
+	line-height: 1.5
+}
+.embedvideo {
+	position: relative;
+	height: 0;
+	padding: 30px 0 56.25%;
+	margin: 0 0 1em;
+	overflow: hidden
+}
+.embedvideo embed,
+.embedvideo iframe,
+.embedvideo object {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%
+}
+.hidden {
+	visibility: hidden;
+	display: none
+}
+a[href^="tel:"] {
+	color: #4b4c44;
+	text-decoration: none;
+	cursor: default
+}
+strong.highlighted {
+	color: #54534a
+}
+@keyframes pulse {
+	0%, 100% {
+		-ms-transform: scale(1);
+		transform: scale(1)
+	}
+	50% {
+		-ms-transform: scale(1.25);
+		transform: scale(1.25)
+	}
+}
+@keyframes scroll {
+	0% {
+		bottom: 5em;
+		opacity: 0
+	}
+	50% {
+		opacity: 1
+	}
+	100% {
+		bottom: 3em;
+		opacity: 0
+	}
+}
+@keyframes ungrayscale {
+	to {
+		-webkit-filter: grayscale(0);
+		filter: grayscale(0)
+	}
+}
+article a[rel~=attachment],
+article div.wp-caption,
+article img {
+	display: block;
+	margin: 0 0 .75em;
+	max-width: 100%;
+	text-align: center
+}
+article a[rel~=attachment] img,
+article div.wp-caption img,
+article img img {
+	float: none;
+	padding: 0;
+	border: 0;
+	margin: 0
+}
+article a[rel~=attachment] p.wp-caption-text,
+article div.wp-caption p.wp-caption-text,
+article img p.wp-caption-text {
+	width: 100%;
+	margin: .75em 0 0;
+	text-align: center;
+	color: #999;
+	font-style: italic;
+	font-size: .88em
+}
+nav.pagination {
+	display: block;
+	text-align: center
+}
+nav.pagination a,
+nav.pagination span {
+	display: inline-block;
+	padding: .3em 0;
+	width: 2em;
+	margin: .1em;
+	text-align: center;
+	background: #FFF;
+	color: #4b4c44;
+	border: 1px solid #A19589
+}
+nav.pagination a,
+nav.pagination a .dots,
+nav.pagination span .dots {
+	background: #A19589
+}
+nav.pagination a {
+	text-decoration: none;
+	color: #231f20;
+	border: 1px solid #A19589
+}
+nav.pagination a:hover {
+	background: #231f20;
+	color: #FFF
+}
+nav.pagination a.next,
+nav.pagination a.prev {
+	background: 0 0;
+	border: none
+}
+nav.pagination a.next:hover,
+nav.pagination a.prev:hover {
+	color: #4b4c44;
+	text-decoration: underline
+}
+nav.pagination ul {
+	display: block
+}
+nav.pagination ul:after,
+nav.pagination ul:before {
+	display: table;
+	content: '';
+	line-height: 0
+}
+nav.pagination ul:after {
+	clear: both
+}
+nav.pagination ul li {
+	display: block;
+	float: left;
+	width: 50%;
+	text-align: left
+}
+.readmore:after,
+nav ul,
+nav ul li a {
+	display: inline-block
+}
+nav.pagination ul li a {
+	width: auto;
+	background: 0 0;
+	border: 0;
+	display: inline-block
+}
+nav.pagination ul li a:focus,
+nav.pagination ul li a:hover {
+	background: 0 0;
+	color: #4b4c44;
+	text-decoration: underline
+}
+nav.pagination ul .newer {
+	float: right;
+	text-align: right
+}
+.share,
+.social,
+nav[role=navigation] {
+	text-align: center
+}
+.search-results {
+	list-style: none;
+	padding: 0
+}
+.search-results li h1 {
+	margin: 0 0 .25em
+}
+.readmore {
+	font-size: .875em;
+	letter-spacing: .02em
+}
+.readmore:after {
+	content: ' \203A';
+	padding: 0 0 0 .25em
+}
+nav ul {
+	list-style: none;
+	padding: 0
+}
+nav ul li a {
+	color: #A19589;
+	text-decoration: none
+}
+nav ul li a:focus,
+nav ul li a:hover {
+	color: #FFF
+}
+nav[role=navigation] ul li {
+	margin: 0 0 .75em
+}
+nav[role=navigation] ul li a {
+	display: block;
+	letter-spacing: .2em;
+	font-size: 1.25em
+}
+.share,
+.social {
+	margin: 1em 0 0
+}
+.share ul li,
+.social ul li {
+	float: left;
+	margin: 0 .5em
+}
+.share ul li a,
+.social ul li a {
+	width: 2em;
+	height: 2em;
+	text-indent: -9999em;
+	color: transparent;
+	border-radius: 100%;
+	background: url(assets/images/sprite.svg) center -19.9em no-repeat #A19589;
+	background-size: 34em 41.065em;
+	opacity: .5;
+	transition: opacity .25s
+}
+.share ul li a:focus,
+.share ul li a:hover,
+.social ul li a:focus,
+.social ul li a:hover {
+	opacity: 1
+}
+.share ul li.twitter a,
+.social ul li.twitter a {
+	background-position: center -.8em
+}
+.share ul li.facebook a,
+.social ul li.facebook a {
+	background-position: center -6.8em
+}
+.share ul li.pinterest a,
+.social ul li.pinterest a {
+	background-position: center -9.7em
+}
+.share ul li.instagram a,
+.social ul li.instagram a {
+	background-position: center -3.8em
+}
+.share ul li.newsletter a,
+.social ul li.newsletter a {
+	background-position: center -21.45em
+}
+.share {
+	margin: 3em 0 0;
+	text-align: left
+}
+.scroll-tip,
+.subscribe,
+.vcard {
+	text-align: center
+}
+.share h4 {
+	text-transform: none;
+	letter-spacing: 0;
+	margin: 0 0 1em
+}
+.share ul li {
+	margin: 0 .25em
+}
+.share ul li a {
+	background-color: #A19589;
+	opacity: .85
+}
+.share ul li:first-child {
+	margin-left: 0
+}
+.subscribe {
+	position: absolute;
+	left: 0;
+	bottom: 100%;
+	width: 94%;
+	background: #231f20;
+	padding: 2em 3%;
+	border-bottom: solid 1px #46463e;
+	transition: all .35s ease-out;
+	opacity: 1;
+	color: #FFF
+}
+.subscribe .social ul li {
+	-ms-animation-name: pulse;
+	animation-name: pulse;
+	-ms-animation-duration: .5s;
+	animation-duration: .5s;
+	-ms-animation-delay: .35s;
+	animation-delay: .35s;
+	-ms-animation-iteration-count: 1;
+	animation-iteration-count: 1
+}
+.subscribe .social ul li a {
+	background-color: #A19589;
+	opacity: 1
+}
+.subscribe .social ul li+li {
+	-ms-animation-delay: .7s;
+	animation-delay: .7s
+}
+.subscribe h2 {
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: .075em;
+	line-height: 1.5;
+	margin: 0
+}
+.subscribe form {
+	-webkit-font-smoothing: subpixel-antialiased
+}
+.home main>section.blockquote,
+body>header,
+footer {
+	-webkit-font-smoothing: antialiased
+}
+.subscribe label {
+	display: none
+}
+.subscribe input {
+	width: 18em
+}
+.subscribe button {
+	width: 15.75em
+}
+.home .subscribe.off-canvas {
+	left: -100%;
+	opacity: .5
+}
+.home .subscribe.off-canvas .social ul li {
+	-ms-animation-name: none;
+	animation-name: none
+}
+.scroll-tip {
+	display: block;
+	position: absolute;
+	bottom: 3em;
+	left: 0;
+	width: 100%;
+	padding: 0 0 1em;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-weight: 600;
+	background: url(assets/images/sprite.svg) center -24em no-repeat;
+	background-size: 54.75em 54.75em;
+	opacity: 0
+}
+.scroll-tip.activated {
+	-ms-animation-name: scroll;
+	animation-name: scroll;
+	-ms-animation-duration: 2s;
+	animation-duration: 2s;
+	-ms-animation-iteration-count: 3;
+	animation-iteration-count: 3
+}
+.vcard {
+	max-width: 80%;
+	margin: 0 auto;
+	text-transform: uppercase;
+	letter-spacing: .15em;
+	line-height: 1.75;
+	font-size: .75em;
+	color: #A19589
+}
+.vcard .adr,
+.vcard .org {
+	margin: 0 0 .75em
+}
+.vcard .org {
+	font-size: 1em;
+	line-height: 1.5;
+	color: #FFF;
+	text-decoration: none
+}
+.vcard .org:focus,
+.vcard .org:hover {
+	text-decoration: underline
+}
+.vcard .org em {
+	font-style: normal
+}
+.vcard .email,
+.vcard .press-kit {
+	color: #A19589;
+	text-decoration: none
+}
+.vcard .email:focus,
+.vcard .email:hover,
+.vcard .press-kit:focus,
+.vcard .press-kit:hover {
+	color: #FFF
+}
+.info {
+	z-index: 500;
+	overflow: hidden
+}
+.info figure {
+	position: relative;
+	margin: 0
+}
+.info figure img {
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 0
+}
+.info figure.toggled figcaption button {
+	opacity: 0;
+	-ms-animation: none;
+	animation: none
+}
+.info figure.toggled figcaption p {
+	bottom: 0;
+	opacity: 1
+}
+.info figure figcaption {
+	z-index: 1;
+	font-size: .8125em
+}
+.info figure figcaption button {
+	display: block;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	width: 2.6em;
+	height: 2.6em;
+	padding: 0;
+	border: none;
+	border-radius: 9999px;
+	text-indent: -9999em;
+	color: transparent;
+	background: 0 0;
+	box-shadow: inset 0 0 0 3px rgba(255, 255, 255, .35), inset 0 0 1px 6px rgba(255, 255, 255, .25);
+	transition: all .1s ease-in-out;
+	opacity: .8;
+	-ms-animation-name: pulse;
+	animation-name: pulse;
+	-ms-animation-duration: 1.5s;
+	animation-duration: 1.5s;
+	-ms-animation-iteration-count: infinite;
+	animation-iteration-count: infinite
+}
+.info figure figcaption button:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 9999px;
+	box-shadow: 0 0 0 .4em #fff
+}
+.info figure figcaption button:focus,
+.info figure figcaption button:hover {
+	outline: 0;
+	opacity: 1;
+	box-shadow: inset 0 0 0 3px rgba(255, 255, 255, .35), inset 0 0 5px 9px rgba(255, 255, 255, .25)
+}
+.info figure figcaption p {
+	position: absolute;
+	bottom: -100%;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	padding: 1em;
+	background: #a1a73a;
+	color: #FFF;
+	text-align: left;
+	font-style: normal;
+	opacity: 0;
+	transition: all .25s ease-in-out;
+	box-sizing: border-box
+}
+.info figure+figure figcaption button {
+	-ms-animation-delay: 1s;
+	animation-delay: 1s
+}
+.info figure+figure+figure figcaption button {
+	-ms-animation-delay: .5s;
+	animation-delay: .5s
+}
+.info figure.green figcaption p {
+	background: #a1a73a
+}
+.info figure.dark-green figcaption p {
+	background: #4f5c3b
+}
+.info figure.blue figcaption p {
+	background: #638fb6
+}
+.info figure.red figcaption p {
+	background: #571c20
+}
+body>header,
+footer {
+	background: #231f20
+}
+.info figure.acadian-artifacts figcaption button {
+	top: 50%;
+	left: 20%
+}
+.info figure.basket-wine-press figcaption button {
+	top: 40%;
+	left: 25%
+}
+.info figure.bio-dynamic-cow-horns figcaption button {
+	top: 20%;
+	left: 25%
+}
+.info figure.crushed-grapes figcaption button {
+	top: 25%;
+	left: 70%
+}
+.info figure.cellar-door figcaption button {
+	top: 25%;
+	left: 75%
+}
+.info figure.english-baby-doll-sheep figcaption button {
+	top: 45%;
+	left: 80%
+}
+.info figure.grape-cluster figcaption button {
+	top: 25%;
+	left: 30%
+}
+.info figure.ancienne figcaption button {
+	top: 20%;
+	left: 35%
+}
+.info figure.wine-barriques figcaption button {
+	top: 55%;
+	left: 75%
+}
+body>header {
+	position: relative;
+	width: 94%;
+	padding: 1em 3%;
+	color: #54534a;
+	box-sizing: border-box
+}
+body>header .logo {
+	display: none
+}
+body>header .social,
+body>header .vcard {
+	position: absolute;
+	bottom: 7em;
+	left: 10%
+}
+body>header .social {
+	left: auto;
+	width: 94%;
+	bottom: 1em
+}
+body>header.collapsable {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 20em;
+	padding: 25% 1em 5%;
+	height: 100%;
+	z-index: 9999;
+	transition: all .25s ease-in-out
+}
+body>header.collapsable.collapsed {
+	right: -20em
+}
+body>header.collapsable.collapsed .trigger {
+	left: -3em
+}
+body>header.collapsable .trigger {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 3em;
+	height: 3em;
+	z-index: 3;
+	background: #231f20;
+	text-decoration: none;
+	transition: left .25s ease-in-out;
+	color: transparent
+}
+body>header.collapsable .trigger em {
+	position: absolute;
+	left: -9999em
+}
+.posts .card-header,
+.posts a,
+.posts li,
+footer {
+	position: relative
+}
+body>header.collapsable .vcard {
+	display: none
+}
+footer {
+	width: 100%;
+	padding: 1em 0;
+	margin: 17.9em 0 0;
+	color: #A19589;
+	z-index: 4000
+}
+footer nav[role=navigation] {
+	margin: 2em 0
+}
+footer .copyright {
+	margin: 3em 0 0;
+	display: block;
+	text-align: center;
+	color: #626056;
+	text-transform: uppercase;
+	letter-spacing: .025em
+}
+.home>footer,
+.posts {
+	margin: 0
+}
+.posts {
+	list-style: none;
+	padding: 0
+}
+.posts li {
+	background: #FFF;
+	overflow: hidden
+}
+.posts li:focus .badge,
+.posts li:hover .badge {
+	-ms-transform: translateX(-1em);
+	transform: translateX(-1em)
+}
+.posts li:focus a,
+.posts li:hover a {
+	opacity: .95
+}
+.posts li:first-child {
+	width: 100%
+}
+.posts li:first-child .card-header {
+	position: relative;
+	min-height: 24em
+}
+.posts li:first-child .badge {
+	top: 10em
+}
+.posts a {
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+	transition: opacity .2s
+}
+.posts .card-header {
+	min-height: 18em;
+	background: center center no-repeat #231f20;
+	background-size: cover
+}
+.posts .card-header:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(15deg, #000 0, rgba(0, 0, 0, 0) 40%);
+	z-index: 1
+}
+.posts .card-title {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 1.5em;
+	z-index: 2;
+	text-align: left;
+	color: #FFF;
+	box-sizing: border-box;
+	text-shadow: 0 0 3px rgba(0, 0, 0, .5)
+}
+.posts .badge {
+	position: absolute;
+	top: 2em;
+	right: -1em;
+	padding: .35em 2em .35em 1em;
+	background: #FFF;
+	color: #231f20;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	pointer-events: none;
+	transition: transform .2s ease-out
+}
+.posts .postmetadata {
+	display: block;
+	margin: 0 0 .25em;
+	font-size: 1em;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: .05em
+}
+.posts h2 {
+	position: relative;
+	display: inline-block;
+	font-family: clavo, Georgia, serif;
+	font-size: 1.75em;
+	margin: 0
+}
+.posts .card-content {
+	padding: 1em;
+	font-family: proxima-nova, Arial, sans-serif;
+	line-height: 1.35;
+	text-align: center;
+	background: #231f20
+}
+.posts .card-content p {
+	margin: 0
+}
+.suggestions {
+	padding: 0 0 3em
+}
+.suggestions>h2 {
+	font-family: clavo, Georgia, serif;
+	text-align: center;
+	margin: 0 0 1em
+}
+.suggestions .posts {
+	margin: 0
+}
+.suggestions .posts li:first-child .card-header {
+	min-height: 18em
+}
+main {
+	position: static;
+	margin: 0 auto;
+	padding: 5em 0 0
+}
+main>article,
+main>section {
+	padding: 0 3% 8em;
+	font-family: proxima-nova, Arial, sans-serif;
+	color: #4b4c44
+}
+.home main>section .intro h1,
+.press main>section .intro h1,
+main>article h1,
+main>article h1+p,
+main>article h2 {
+	font-family: clavo, Georgia, serif
+}
+main>article {
+	font-size: 1.25em;
+	line-height: 1.35
+}
+main>article .postmetadata {
+	display: block;
+	font-size: .8125em;
+	text-align: center;
+	color: #999;
+	text-transform: uppercase;
+	letter-spacing: .05em
+}
+main>article h1 {
+	font-size: 1.65em;
+	text-align: center;
+	color: #54534a;
+	margin: .25em 0 .65em
+}
+main>article h1+p {
+	color: #333;
+	font-size: 1.05em;
+	line-height: 1.5;
+	font-style: italic;
+	margin: 0 0 1em
+}
+main>article h2 {
+	font-size: 1.25em;
+	color: #231f20
+}
+body {
+	background: url(assets/images/header-watermark-pattern-large.png) center top repeat-x;
+	background-size: auto 150px
+}
+body.home,
+body.press {
+	background: #FFF
+}
+.home main,
+.press main,
+.single-wine main,
+.single-vine main,
+.weddings main {
+	width: 100%;
+	padding: 0
+}
+.blog,
+.post-type-archive-wine,
+.page-template-page-wines {
+	background: #171616
+}
+.blog main,
+.post-type-archive-wine main,
+.page-template-page-wines main {
+	padding: 0
+}
+.blog main h1,
+.post-type-archive-wine main h1,
+.page-template-page-wines main h1 {
+	position: absolute;
+	width: 90%;
+	margin: 1.5em 5% 0;
+	z-index: 500;
+	letter-spacing: .125em;
+	font-size: 1.65em;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: center;
+	color: #FFF;
+	text-shadow: 0 0 3px rgba(0, 0, 0, .5);
+	pointer-events: none
+}
+.home main>section,
+.press main>section {
+	position: relative;
+	box-sizing: border-box;
+	border-left: solid 5px #231f20;
+	border-right: solid 5px #231f20;
+	width: 100%;
+	min-height: 100%;
+	padding: 0;
+	background: center top no-repeat;
+	background-size: cover;
+	text-align: center;
+	color: #FFF
+}
+.home main>section .intro,
+.press main>section .intro {
+	position: relative;
+	padding: 9em 3% 0;
+	height: 32em;
+	min-height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased
+}
+.home main>section .intro h1,
+.press main>section .intro h1 {
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-size: 2.5em
+}
+.home main>section .intro h1+p,
+.press main>section .intro h1+p {
+	font-size: 1.25em;
+	font-style: italic
+}
+.home main>section article,
+.press main>section article {
+	position: relative;
+	background: #FFF;
+	text-align: left;
+	padding: 4em 5%;
+	color: #4b4c44;
+	font-family: proxima-nova, Arial, sans-serif
+}
+.home main>section#welcome {
+	background-image: url(assets/images/bg-welcome-mobile.jpg)
+}
+.home main>section#the-wine {
+	background-image: url(assets/images/bg-thewine-mobile.jpg)
+}
+.home main>section#the-land {
+	background-image: url(assets/images/bg-theland-mobile.jpg)
+}
+.home main>section#the-name {
+	background: #FFF
+}
+.home main>section#the-vines {
+	background-image: url(assets/images/bg-thevines-mobile.jpg)
+}
+.home main>section.notice {
+	background: url(assets/images/bg-notice-mobile.jpg) center bottom no-repeat #0A9FB5
+}
+.home main>section#welcome {
+	background-size: 150% auto
+}
+.home main>section#welcome .intro {
+	z-index: 1;
+	padding: 4em 3%
+}
+.home main>section#welcome .intro h1 {
+	max-width: 8em;
+	width: 100%;
+	line-height: 0;
+	margin: 0 auto;
+	padding: 0 0 75%;
+	text-indent: -9999em;
+	color: transparent;
+	background: url(assets/images/logo-compact-white.svg) center center no-repeat;
+	background-size: 95% auto
+}
+.home main>section#welcome .intro h1+p {
+	padding: 0 .65em;
+	font-size: 1.05em;
+	font-family: clavo, Georgia, serif;
+	text-shadow: 0 0 2px rgba(0, 0, 0, .25)
+}
+.home main>section#welcome article {
+	z-index: 4;
+	padding: 4em 3% 5em;
+	text-align: center
+}
+.home main>section#welcome article h2 {
+	position: relative;
+	display: inline-block;
+	font-family: proxima-nova, Arial, sans-serif;
+	font-size: 1.125em;
+	letter-spacing: .1em;
+	color: #897c6e
+}
+.home main>section#the-wine .intro p,
+.home main>section#the-wine article h1,
+.home main>section#welcome article h2+p {
+	font-family: clavo, Georgia, serif
+}
+.home main>section#welcome article h2:after,
+.home main>section#welcome article h2:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: -2.5em;
+	width: 2em;
+	height: 1px;
+	background: #A19589
+}
+.home main>section#welcome article h2:after {
+	left: auto;
+	right: -2.5em
+}
+.home main>section#welcome article h2+p {
+	padding: 1em 0;
+	font-size: 1.125em;
+	color: #000;
+	border-top: solid 1px #A19589;
+	border-bottom: solid 1px #A19589;
+	font-style: italic
+}
+.home main>section.blockquote {
+	position: relative;
+	z-index: 4;
+	background: #050404
+}
+.home main>section.blockquote .quote {
+	margin: 0 auto;
+	max-width: 90%
+}
+.home main>section.blockquote .quote blockquote {
+	font-size: 1em;
+	text-align: left;
+	overflow: hidden;
+	height: 0;
+	color: #FFF;
+	transition: all .25s ease-in-out
+}
+.home main>section.blockquote .quote blockquote h1 {
+	font-size: 1.125em;
+	font-weight: 400
+}
+.home main>section.blockquote .quote blockquote .signature {
+	display: block
+}
+.home main>section.blockquote .quote.read blockquote {
+	padding: 4em 0;
+	height: auto
+}
+.home main>section.blockquote .quote.read blockquote .listen-trigger {
+	display: block;
+	color: #FFF;
+	margin: 1em 0 0
+}
+.home main>section.blockquote .quote.read .quote-player {
+	padding: 0;
+	height: 0;
+	margin: 0
+}
+.home main>section.blockquote .quote.read .title {
+	padding: 0;
+	height: 0
+}
+.home main>section.blockquote .quote.no-audio .listen-trigger,
+.home main>section.blockquote .quote.no-audio .quote-player .play {
+	display: none;
+	visibility: hidden
+}
+.home main>section.blockquote .quote .quote-player {
+	position: relative;
+	overflow: hidden;
+	padding: 4em 0
+}
+.home main>section.blockquote .quote .quote-player .play {
+	position: relative;
+	width: 4em;
+	height: 4em;
+	border: 3px solid #FFF;
+	border-radius: 9999px;
+	padding: 0;
+	background: url(assets/images/sprite.svg) center -32em no-repeat;
+	background-size: 54.66666667em 54.66666667em;
+	overflow: hidden;
+	color: transparent;
+	text-indent: -9999em
+}
+.home main>section.blockquote .quote .quote-player .play.playing {
+	background-position: center -35.9em
+}
+.home main>section.blockquote .quote .quote-player .play:focus,
+.home main>section.blockquote .quote .quote-player .play:hover {
+	outline: #FFF solid 0
+}
+.home main>section.blockquote .quote .quote-player .play:hover {
+	background-color: rgba(255, 255, 255, .25)
+}
+.home main>section.blockquote .quote .quote-player .play span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #FFF;
+	border-radius: 9999px;
+	opacity: .5;
+	-ms-transform: scale(0);
+	transform: scale(0);
+	transition: all .3s ease-in-out;
+	z-index: 2
+}
+.home main>section.blockquote .quote .quote-player .play span.fade {
+	opacity: 0
+}
+.home main>section.blockquote .quote .quote-player .play em {
+	position: relative;
+	z-index: 4
+}
+.home main>section.blockquote .quote .title {
+	position: relative;
+	margin: 2em 0 0;
+	color: #FFF
+}
+.home main>section.blockquote .quote .title h1 {
+	font-size: 1.35em;
+	margin: 0 0 .5em
+}
+.home main>section.blockquote .quote .title h1 cite {
+	display: inline-block;
+	text-transform: uppercase;
+	font-style: normal;
+	width: 100%
+}
+.home main>section.blockquote .quote .title h2 {
+	font-size: 1.125em
+}
+.home main>section.blockquote .quote .title a {
+	color: #FFF;
+	padding: 0 .75em
+}
+.home main>section.blockquote .quote .title a.listen-trigger {
+	border-right: solid 1px #FFF
+}
+.home main>section#the-wine .intro {
+	z-index: 4
+}
+.home main>section#the-land .intro,
+.home main>section#the-wine article {
+	z-index: 6
+}
+.home main>section#the-wine .intro h1 {
+	margin-top: -2em;
+	text-shadow: 0 0 3px rgba(0, 0, 0, .35)
+}
+.home main>section#the-wine .intro p {
+	max-width: 40em;
+	margin: 0 auto;
+	font-size: 1em;
+	letter-spacing: .1em;
+	-webkit-font-smoothing: subpixel-antialiased;
+	text-shadow: 0 0 3px rgba(0, 0, 0, .35)
+}
+.home main>section#the-wine .intro .button {
+	margin-top: 3em
+}
+.home main>section#the-wine article h1 {
+	text-transform: uppercase;
+	font-size: 1.25em;
+	letter-spacing: .1em
+}
+.home main>section#the-wine article p:first-child {
+	margin: 0 0 1em
+}
+.home main>section#the-land {
+	background-size: contain
+}
+.home main>section#the-land .intro:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(images/logo-compact-watermark.svg) center 5% no-repeat;
+	background-size: 600px auto;
+	z-index: -1;
+	opacity: .35
+}
+.home main>section#the-name .intro:after,
+.home main>section#the-name .logo-breakdown #butterfly,
+.home main>section#the-name .logo-breakdown #fleur-de-lis,
+.home main>section#the-name .logo-breakdown #lines circle,
+.home main>section#the-name .logo-breakdown #lines path,
+.home main>section#the-name .logo-breakdown #may-flower,
+.home main>section#the-name .logo-breakdown #thistle,
+.home main>section#the-name .logo-breakdown #wine-leaves,
+.home main>section#the-name .logo-breakdown #word-mark circle,
+.home main>section#the-name .logo-breakdown #word-mark path,
+.home main>section#the-name .logo-breakdown #word-mark rect {
+	display: none
+}
+.home main>section#the-land .intro h1+p {
+	font-family: proxima-nova, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 1.35em;
+	letter-spacing: .1em;
+	font-style: normal;
+	margin: 0;
+	-webkit-font-smoothing: subpixel-antialiased
+}
+.home main>section#the-land .intro h1+p .label {
+	letter-spacing: 0
+}
+.home main>section#the-land article h1,
+.home main>section#the-name .intro h1+p,
+.home main>section#the-name .logo-breakdown>h2 {
+	letter-spacing: .05em;
+	font-family: clavo, Georgia, serif;
+	text-transform: uppercase
+}
+.home main>section#the-land .intro h1+p+p {
+	font-family: clavo, Georgia, serif
+}
+.home main>section#the-land article {
+	z-index: 6
+}
+.home main>section#the-land article h1 {
+	font-size: 1.25em
+}
+.home main>section#the-name .intro {
+	z-index: 8;
+	color: #4b4c44;
+	height: auto;
+	min-height: auto;
+	padding: 4em 3% 2em
+}
+.home main>section#the-name .intro h1+p {
+	margin: 1.5em 0;
+	font-style: normal;
+	color: #000
+}
+.home main>section#the-name .intro article {
+	padding: 0 5%;
+	-webkit-font-smoothing: subpixel-antialiased
+}
+.home main>section#the-name .logo-breakdown {
+	margin: 0 3%;
+	padding: 0 0 4em;
+	overflow: hidden;
+	color: #4b4c44;
+	z-index: 8
+}
+.home main>section#the-name .logo-breakdown>h2 {
+	font-size: 1.25em;
+	margin: 0 0 1.5em;
+	padding: 0 5%
+}
+.home main>section#the-name .logo-breakdown .full-logo {
+	left: -10px;
+	width: 320px;
+	height: 280px;
+	-ms-transform: scale(2.35);
+	transform: scale(2.35);
+	margin-left: -15px
+}
+.home main>section#the-name .logo-breakdown .full-logo.bg {
+	background: url(assets/images/logo-explode.svg) center center no-repeat
+}
+.home main>section#the-name .logo-breakdown ul {
+	display: inline-block;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1em;
+	text-align: left
+}
+.home main>section#the-name .logo-breakdown ul li {
+	display: block;
+	margin: 0 0 1em;
+	padding: 0 1em .75em 4em;
+	background: url(assets/images/sprite.svg) -10em -40em no-repeat;
+	background-size: 82.125em 82.125em;
+	border-bottom: dashed 1px #999
+}
+.home main>section#the-name .logo-breakdown ul li h2 {
+	font-family: clavo, Georgia, serif;
+	font-size: 1.125em;
+	margin: 0
+}
+.home main>section#the-name .logo-breakdown ul li p {
+	font-family: proxima-nova, Arial, sans-serif;
+	margin: 0;
+	color: #999;
+	font-size: .875em
+}
+.home main>section#the-name .logo-breakdown ul li.thistle {
+	background-position: -39em -61em
+}
+.home main>section#the-name .logo-breakdown ul li.may-flower {
+	background-position: -39em -79.75em
+}
+.home main>section#the-name .logo-breakdown ul li.wine-leaves {
+	background-position: -39em -70.1em
+}
+.home main>section#the-name .logo-breakdown ul li.butterfly {
+	background-position: -39em -65.35em
+}
+.home main>section#the-name .logo-breakdown ul li.fleur-de-lis {
+	background-position: -39em -75em
+}
+.home main>section#the-name .logo-breakdown ul+p {
+	padding: 0 5%;
+	font-family: clavo, Georgia, serif
+}
+.home main>section#the-name .logo-breakdown ul+p .ampersand {
+	display: block;
+	text-align: center
+}
+.home main>section#the-vines {
+	background-size: contain
+}
+.home main>section#the-vines .intro {
+	z-index: 10
+}
+.home main>section#the-vines .intro:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(assets/images/logo-compact-watermark.svg) center 5% no-repeat;
+	background-size: 600px auto;
+	z-index: -1;
+	opacity: .15
+}
+.home main>section#the-vines .intro h1 {
+	text-shadow: 0 0 3px rgba(0, 0, 0, .35)
+}
+.home main>section#the-vines .intro h1+p {
+	font-size: 1em;
+	font-family: clavo, Georgia, serif;
+	-webkit-font-smoothing: subpixel-antialiased;
+	text-shadow: 0 0 3px rgba(0, 0, 0, .35)
+}
+.home main>section#the-vines .intro .zoom {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: all .5s ease-in-out;
+	display: block;
+	visibility: visible;
+	overflow: hidden;
+	margin: 0
+}
+.home main>section#the-vines .intro .zoom.zoomed {
+	overflow: visible
+}
+.home main>section#the-vines .intro .zoom.zoomed figcaption {
+	font-size: 1em;
+	background: rgba(4, 7, 7, .85)
+}
+.home main>section#the-vines .intro .zoom.zoomed figcaption button {
+	position: absolute;
+	top: .25em;
+	left: .25em;
+	right: auto;
+	background: 0 0;
+	color: #FFF;
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	box-shadow: 0 0 0 2px #fff
+}
+.home main>section#the-vines .intro .zoom.zoomed figcaption table {
+	opacity: 1
+}
+.home main>section#the-vines .intro .zoom figcaption {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0
+}
+.home main>section#the-vines .intro .zoom figcaption button {
+	position: absolute;
+	top: 70%;
+	left: 17%;
+	width: 1em;
+	height: 1em;
+	padding: 0;
+	line-height: 1.1em;
+	font-size: 2.5em;
+	font-family: proxima-nova, Arial, sans-serif;
+	border: 0;
+	border-radius: 100%;
+	background: #FFF;
+	background: rgba(255, 255, 255, .8);
+	box-shadow: 0 0 0 .5em rgba(255, 255, 255, .25);
+	z-index: 100
+}
+.home main>section#the-vines .intro .zoom figcaption button:focus,
+.home main>section#the-vines .intro .zoom figcaption button:hover {
+	color: #4b4c44;
+	background: #FFF;
+	outline: 0
+}
+.home main>section#the-vines .intro .zoom figcaption table {
+	position: absolute;
+	top: 4.25em;
+	line-height: 1.25;
+	font-size: .9em;
+	font-family: proxima-nova, Arial, sans-serif;
+	-webkit-font-smoothing: subpixel-antialiased;
+	transition: all .25s ease-in-out;
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	opacity: 0;
+	text-align: left;
+	margin: 0
+}
+.home main>section#the-vines .intro .zoom figcaption table tbody td,
+.home main>section#the-vines .intro .zoom figcaption table tbody th {
+	padding: .65em 1em .35em
+}
+.home main>section#the-vines .intro .zoom figcaption table th {
+	text-transform: uppercase;
+	color: #A19589;
+	white-space: nowrap;
+	text-align: left
+}
+.home main>section#the-vines .intro .zoom figcaption table thead th {
+	border: 0;
+	padding: 1.25em 1em 1em;
+	font-size: .8125em;
+	background: rgba(255, 255, 255, .15);
+	color: #FFF;
+	width: 50%;
+	box-sizing: border-box
+}
+.home main>section#the-vines article h1,
+.home main>section.notice article h1 {
+	font-size: 1.25em;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	font-family: clavo, Georgia, serif
+}
+.home main>section#the-vines .intro .zoom figcaption table thead tr {
+	border: 0
+}
+.home main>section#the-vines .intro .zoom figcaption table tr {
+	border-top: dashed 1px #000;
+	border-bottom: 0
+}
+.home main>section#the-vines .intro .zoom figcaption table tr td,
+.home main>section#the-vines .intro .zoom figcaption table tr th {
+	line-height: 1.25;
+	padding: .5em;
+	display: inline-block;
+	white-space: nowrap
+}
+.home main>section#the-vines article {
+	z-index: 10
+}
+.home main>section.notice {
+	z-index: 3000;
+	background-position: center bottom
+}
+.home main>section.notice article {
+	color: #FFF;
+	padding: 2em 3% 24em;
+	text-align: center;
+	background: 0 0;
+	z-index: 12
+}
+.home main>section.notice article h1 {
+	-webkit-font-smoothing: antialiased
+}
+.home main>section.notice article h1+p {
+	font-family: clavo, Georgia, serif;
+	font-style: italic;
+	font-size: 1.125em;
+	-webkit-font-smoothing: antialiased
+}
+.home main>section.notice article a {
+	color: #FFF
+}
+.home main>section.notice article .signature {
+	display: block
+}
+.home main>section.notice article .signature img {
+	max-width: 300px;
+	height: auto
+}
+.press main>section .intro {
+	padding: 6em 3% 0;
+	height: 26em;
+	background: center center no-repeat;
+	background-size: cover;
+	text-shadow: 0 0 4px rgba(0, 0, 0, .25)
+}
+.press main>section .intro p {
+	font-family: clavo, Georgia, serif;
+	line-height: 1.25
+}
+.press main>section .intro .button {
+	margin: 2em 0 0;
+	line-height: 1.25
+}
+.press main>section#press-intro .intro {
+	background-image: url(assets/images/bg-press-mobile.jpg)
+}
+.press main>section#media-mentions .intro {
+	background-image: url(assets/images/bg-theland-mobile.jpg)
+}
+.press main>section#the-wines .intro {
+	background-image: url(assets/images/bg-presswine-mobile.jpg)
+}
+.press main>section#the-brand .intro {
+	background-image: url(assets/images/bg-thebrand-mobile.jpg)
+}
+.press main>section#the-photos .intro {
+	background-image: url(assets/images/bg-thephotos-mobile.jpg)
+}
+.press main>section#the-team .intro {
+	background-image: url(assets/images/bg-theteam-mobile.jpg)
+}
+.press main>section#the-photos article,
+.press main>section#the-team article {
+	background: #231f20
+}
+.press main>section article {
+	padding: 0;
+	text-align: center;
+	background: #231f20;
+}
+.press main>section article h1 {
+	color: #fff;
+	padding: 50px 0 10px;
+}
+.press main>section article ul {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0
+}
+.press main>section article ul li {
+	box-sizing: border-box
+}
+.press main>section article ul a {
+	display: block;
+	text-decoration: none
+}
+.press main>section article ul h2 {
+	margin: 0
+}
+.press main>section#press-intro h1 {
+	max-width: 8em;
+	width: 100%;
+	line-height: 0;
+	margin: 0 auto;
+	padding: 0 0 6em;
+	text-indent: -9999em;
+	color: transparent;
+	background: url(assets/images/logo-compact-white.svg) center center no-repeat;
+	background-size: 95% auto
+}
+.press main>section .media-mentions,
+.press main>section .posts.wines {
+	background: #231f20
+}
+.press main>section#press-intro h1+p {
+	margin: .5em 0 0;
+	padding: 0 .65em;
+	font-size: 1.5em;
+	font-family: clavo, Georgia, serif;
+	text-shadow: 0 0 2px rgba(0, 0, 0, .25)
+}
+.press main>section#press-intro article {
+	padding: 4em 3% 5em;
+	text-align: center
+}
+.press main>section#press-intro article h2+p {
+	padding: 1em 0;
+	font-family: clavo, Georgia, serif;
+	font-size: 1.125em;
+	font-style: italic;
+	color: #000;
+	border-top: solid 1px #A19589;
+	border-bottom: solid 1px #A19589
+}
+.press main>section .media-mentions li {
+	padding: 1em;
+	border-top: solid 2px #333
+}
+.press main>section .media-mentions li:first-child {
+	border-top: 0
+}
+.press main>section .media-mentions li.award {
+	color: #FFF;
+	font-weight: 600
+}
+.press main>section .media-mentions li.award h3 {
+	margin: 1.5em 0 .25em;
+	font-family: clavo, Georgia, serif;
+	text-transform: uppercase;
+	letter-spacing: .07em
+}
+.press main>section .media-mentions li.award p {
+	margin: 0;
+	line-height: 1.25
+}
+.press main>section .media-mentions li a,
+.press main>section .media-mentions li a:visited {
+	color: #aca297
+}
+.press main>section .media-mentions li h2 {
+	display: block;
+	margin: 0;
+	height: 4em;
+	text-align: center;
+	vertical-align: middle
+}
+.press main>section .media-mentions li h2:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -.25em
+}
+.press main>section .media-mentions li h2 img {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	max-width: 80%;
+	max-height: 100%
+}
+.press main>section .media-mentions li blockquote {
+	margin: 0;
+	font-family: clavo, Georgia, serif;
+	font-style: italic
+}
+.press main>section .media-mentions li blockquote:before {
+	content: 'â€œ'
+}
+.press main>section .media-mentions li blockquote:after {
+	content: 'â€'
+}
+.press main>section .posts.wines li:first-child .card-header {
+	min-height: 18em
+}
+.press main>section#the-brand article ul li {
+	position: relative;
+	text-align: center;
+	border-top: solid 2px #f0f0f0
+}
+.press main>section#the-brand article ul li:first-child {
+	border: 0
+}
+.press main>section#the-brand article ul li a {
+	display: block;
+	vertical-align: middle;
+	padding: 0 0 2em
+}
+.press main>section#the-brand article ul li a:before {
+	content: '';
+	display: inline-block;
+	height: 10em;
+	vertical-align: middle;
+	margin-right: -.25em
+}
+.press main>section#the-brand article ul li img {
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 90%;
+	max-height: 6em;
+	margin: 0
+}
+.weddings main>section#weddings-location-drawing img,
+.weddings main>section#weddings-package-demo p img {
+	max-width: 100%
+}
+.press main>section#the-brand article ul li h2 {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 1em 0;
+	font-size: .9375em;
+	color: #999;
+	text-transform: uppercase;
+	letter-spacing: .01em
+}
+.press main>section#the-photos article ul li,
+.press main>section#the-team article ul li {
+	overflow: hidden
+}
+.press main>section#the-photos article ul li a,
+.press main>section#the-team article ul li a {
+	min-height: 12em;
+	text-indent: -9999em;
+	color: transparent;
+	background: center center no-repeat;
+	background-size: cover;
+	transition: transform 1s ease-out, -webkit-filter 1s ease-out, transform 1s ease-out, filter 1s ease-out;
+	transition: transform 1s ease-out, filter 1s ease-out
+}
+.press main>section#the-photos article ul li a:hover,
+.press main>section#the-team article ul li a:hover {
+	-ms-transform: scale(1.1);
+	transform: scale(1.1)
+}
+.press main>section#the-team article ul li a {
+	position: relative;
+	background: center top no-repeat;
+	background-size: cover;
+	text-indent: 0;
+	transition: none
+}
+.weddings header a.btn,
+.weddings main>section a.btn {
+	transition: opacity .3s ease-in-out;
+	text-transform: uppercase;
+	text-decoration: none
+}
+.press main>section#the-team article ul li a:focus,
+.press main>section#the-team article ul li a:hover {
+	-ms-transform: none;
+	transform: none
+}
+.press main>section#the-team article ul li a:focus h2,
+.press main>section#the-team article ul li a:hover h2 {
+	color: #FFF
+}
+.press main>section#the-team article h2 {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: .35em 1em .5em;
+	background: #231f20;
+	color: #A19589;
+	line-height: 1.25;
+	font-family: clavo, Georgia, serif;
+	font-size: .9375em
+}
+.weddings main>section h2 {
+	font-family: clavo, Georgia, serif
+}
+.weddings main>section a.btn {
+	background-color: transparent;
+	color: #231f20;
+	border: 2px solid #231f20;
+	opacity: 1;
+	font-family: proxima-nova, Arial, sans-serif;
+	padding: .7em 1.5em
+}
+.ancienne figcaption,
+.weddings main>section#weddings-description p .serif,
+.weddings main>section#weddings-intro p,
+.weddings main>section#weddings-package p {
+	font-family: clavo, Georgia, serif
+}
+.weddings main>section a.btn:hover {
+	opacity: .5
+}
+.weddings main>section#weddings-intro {
+	text-align: center;
+	padding-bottom: 0;
+	position: relative
+}
+.weddings main>section#weddings-intro h2:after,
+.weddings main>section#weddings-intro h2:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: .6em;
+	width: 2em;
+	height: 1px;
+	background: #999;
+	z-index: 0
+}
+.weddings main>section#weddings-intro h2 {
+	text-transform: uppercase;
+	font-size: 1em;
+	margin-top: 3em
+}
+.weddings main>section#weddings-intro h2:before {
+	left: calc(50% - 5em)
+}
+.weddings main>section#weddings-intro h2:after {
+	left: calc(50% + 3em)
+}
+.weddings main>section#weddings-intro p {
+	padding: 1em 0;
+	border-top: solid 1px #a09488;
+	border-bottom: solid 1px #a09488;
+	font-style: italic
+}
+.weddings main>section#weddings-description {
+	text-align: center;
+	padding-bottom: 1em
+}
+.weddings main>section#weddings-description p {
+	margin: 1.5em 1em 0
+}
+.weddings main>section#weddings-photos {
+	text-align: center;
+	padding: 0
+}
+.weddings main>section#weddings-photos p {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column
+}
+.weddings main>section#weddings-photos p img {
+	width: 100%;
+	-ms-flex-item-align: center;
+	align-self: center
+}
+.weddings main>section#weddings-package {
+	text-align: center;
+	padding-bottom: 2em;
+	padding-top: 1em
+}
+.weddings main>section#weddings-package h2 {
+	text-transform: uppercase
+}
+.weddings main>section#weddings-package p {
+	margin: 1em
+}
+.weddings main>section#weddings-package p br {
+	display: none
+}
+.weddings main>section#weddings-package p:last-child {
+	margin-top: 2em
+}
+.weddings main>section#weddings-package-demo {
+	background-color: #fafafa;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	padding: 4em 0 2em
+}
+.weddings main>section#weddings-package-demo p {
+	-ms-flex-item-align: center;
+	align-self: center;
+	padding: 0;
+	margin: 0
+}
+.weddings main>section#weddings-package-demo p:first-child {
+	width: 100%;
+	text-align: center;
+	padding-right: 0
+}
+.weddings main>section#weddings-package-demo p:first-child img {
+	max-height: 280px
+}
+.weddings main>section#weddings-package-demo p:nth-child(2) {
+	width: 100%;
+	text-align: center
+}
+.weddings main>section#weddings-location-drawing {
+	text-align: center;
+	padding: 0
+}
+.ancienne {
+	text-align: center;
+	margin: 0 0 4em
+}
+.ancienne img {
+	display: inline-block
+}
+.ancienne figcaption {
+	color: #4b4c44
+}
+.ancienne figcaption p {
+	margin: .75em 0
+}
+.single-wine header,
+.single-vine header,
+.weddings header {
+	position: relative;
+	height: 20em;
+	margin: 0 0 9em;
+	background-size: cover;
+	background-position: center center;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	animation: ungrayscale 3s ease .5s 1 normal forwards
+}
+.single-wine header h1,
+.single-vine header h1,
+.weddings header h1 {
+	position: relative;
+	top: 100%;
+	text-align: center;
+	padding: .75em 0 1em;
+	text-transform: uppercase;
+	letter-spacing: .05em
+}
+.single-wine header h1 .wine-meta,
+.single-vine header h1 .wine-meta,
+.weddings header h1 .wine-meta {
+	display: block;
+	font-family: proxima-nova, Arial, sans-serif;
+	font-size: .6em
+}
+.single-wine header .links,
+.single-vine header .links,
+.weddings header .links {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 92%;
+	padding: 1em 4%;
+	text-align: right
+}
+.single-wine header .links .share,
+.single-vine header .links .share,
+.weddings header .links .share {
+	float: right;
+	margin: 0
+}
+.single-wine header .links .share ul,
+.single-vine header .links .share ul,
+.weddings header .links .share ul {
+	margin: 0
+}
+.single-wine header .links .share ul li a,
+.single-vine header .links .share ul li a,
+.weddings header .links .share ul li a {
+	background-color: rgba(255, 255, 255, .75)
+}
+.single-wine article,
+.single-vine article,
+.weddings article {
+	max-width: 720px;
+	margin: 0 auto
+}
+.single-wine article h2,
+.single-vine article h2,
+.weddings article h2 {
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	color: #666;
+	margin: 2em 0 0;
+	font-size: 1.65em
+}
+.single-wine article table tbody td,
+.single-vine article table tbody td,
+.weddings article table tbody td {
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	color: #999;
+	font-size: .875em;
+	line-height: 1.75
+}
+.weddings header {
+	height: 25em;
+	background-image: url(/wp-content/uploads/bride-and-groom-legs-1293x703.jpg);
+	background-position: center bottom;
+	margin: 0 0 6em
+}
+.weddings header h1 {
+	top: 100%;
+	background: #FFF;
+	width: 60%;
+	max-width: 18em;
+	margin: 0 auto;
+	padding: 1em 0
+}
+.weddings header .links {
+	width: 96%;
+	padding: 1em 2% 1.9em;
+	text-align: center
+}
+.weddings header a.btn {
+	background-color: rgba(31, 31, 31, .6);
+	color: #FFF;
+	border: 2px solid #FFF;
+	opacity: 1;
+	font-family: proxima-nova, Arial, sans-serif;
+	padding: .7em 1.5em
+}
+.visit .menu-items article p,
+.visit .menu-items header {
+	font-family: clavo, Georgia, serif
+}
+.weddings header a.btn:hover {
+	opacity: .5
+}
+.visit h3 {
+	margin-top: 4rem
+}
+.visit h2+h3 {
+	margin-top: 2rem
+}
+.visit p.menu-note {
+	margin-top: 2em;
+	text-align: left;
+	font-size: 80%
+}
+.visit p.menu-note em {
+	font-style: italic;
+	font-weight: 400;
+	text-transform: none
+}
+.visit .menu-items header {
+	margin-top: 2rem
+}
+.visit .menu-items header p {
+	margin: 0;
+	line-height: 1
+}
+.visit .menu-items header p .heading-intro {
+	font-style: italic
+}
+.visit .menu-items header h3 {
+	margin-top: 0;
+	font-size: 1.65em;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	color: #666;
+	line-height: 1.125;
+	font-weight: 500
+}
+.visit .menu-items p em {
+	font-style: italic;
+	font-weight: 700;
+	text-transform: none
+}
+.visit .menu-items article header {
+	font-weight: 700;
+	display: -ms-flexbox;
+	display: flex
+}
+.visit .menu-items article header h4 {
+	text-transform: none;
+	-ms-flex: 1 1 90%;
+	flex: 1 1 90%;
+	margin-top: 0;
+	font-weight: 700
+}
+.visit .menu-items article header h4 span {
+	font-weight: 400;
+	color: #666
+}
+.visit .menu-items article header .menu-item-price {
+	-ms-flex: 1 1 10%;
+	flex: 1 1 10%;
+	font-style: normal;
+	text-align: right;
+	color: #4b4c44
+}
+.visit .menu-items article p {
+	font-style: italic;
+	font-size: 1em;
+	color: #666;
+	margin-top: 0;
+	width: 100%
+}
+.visit .menu-items article p.with-seperator {
+	border-top: 1px dotted #A19589
+}
+.no-svg .social ul li a {
+	background: url(assets/images/sprite.svg) center -6.8em no-repeat #A19589;
+	background-size: 12.5em 41em
+}
+.no-svg .social ul li.twitter a {
+	background-position: center -.8em
+}
+.no-svg .social ul li.instagram a {
+	background-position: center -3.75em
+}
+.no-svg main>section#welcome .intro h1 {
+	width: 100%;
+	max-width: 10em;
+	height: 7em;
+	padding: 0;
+	margin: -.5em auto 0;
+	background-image: url(assets/images/logo-compact-watermark-white.png);
+	background-size: contain
+}
+.no-svg main>section.blockquote .quote .listen .play {
+	background: url(assets/images/sprite.svg) center -49em no-repeat;
+	background-size: 25em 82em
+}
+.no-svg main>section#the-land .intro:before {
+	background-image: url(assets/images/logo-compact-watermark.svg)
+}
+.no-svg main>section#the-name .logo-breakdown img {
+	max-width: 100%
+}
+.no-svg main>section#the-name .logo-breakdown ul li {
+	background: url(assets/images/sprite.svg) -10em -40em no-repeat;
+	background-size: 25em 82em
+}
+.no-svg main>section#the-name .logo-breakdown ul li.thistle {
+	background-position: -11em -60.5em
+}
+.no-svg main>section#the-name .logo-breakdown ul li.may-flower {
+	background-position: -11em -80em
+}
+.no-svg main>section#the-name .logo-breakdown ul li.wine-leaves {
+	background-position: -11em -70.1em
+}
+.no-svg main>section#the-name .logo-breakdown ul li.butterfly {
+	background-position: -11em -65.1em
+}
+.no-svg main>section#the-name .logo-breakdown ul li.fleur-de-lis {
+	background-position: -11em -75em
+}
+.no-svg main>section.notice .social ul li a {
+	background-color: #FFF;
+	background-color: rgba(255, 255, 255, .75)
+}
+.no-svg header.collapsable .trigger.trigger.trigger {
+	background-image: url(assets/images/hamburger-icon.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 25px 18px
+}
+@media only screen and (min-width: 480px) {
+	.posts li,
+	.suggestions .posts li:first-child {
+		width: 50%
+	}
+	article a[rel~=attachment].alignleft,
+	article div.wp-caption.alignleft,
+	article img.alignleft {
+		float: left;
+		margin: 0 1.5em 1.5em 0
+	}
+	article a[rel~=attachment].alignright,
+	article div.wp-caption.alignright,
+	article img.alignright {
+		float: right;
+		margin: 0 0 1.5em 1.5em
+	}
+	.posts {
+		margin: 0 0 2em
+	}
+	.posts:after,
+	.posts:before {
+		display: table;
+		content: '';
+		line-height: 0
+	}
+	.posts:after {
+		clear: both
+	}
+	.posts li {
+		float: left
+	}
+	.posts li:nth-child(2n+2) {
+		clear: left
+	}
+	.posts li:first-child .card-content {
+		padding: 1.5em 3em;
+		min-height: 4em;
+		font-size: 1.125em
+	}
+	.posts li .card-content {
+		min-height: 7em
+	}
+	.suggestions .posts li:nth-child(2n+2) {
+		clear: none
+	}
+	.suggestions .posts li:nth-child(2n+1) {
+		clear: left
+	}
+	.suggestions .posts li:first-child .card-content {
+		min-height: 8em;
+		padding: 1em;
+		font-size: 1em
+	}
+	.suggestions .posts li .card-content {
+		min-height: 8em
+	}
+	.subscribe .social ul li a {
+		opacity: .85
+	}
+	body>header.collapsable {
+		box-shadow: 0 0 7px 0 rgba(0, 0, 0, .75)
+	}
+	body>header.collapsable.collapsed {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, .75)
+	}
+	body>header.collapsable .trigger {
+		left: -3em;
+		box-shadow: -1px 1px 3px 0 rgba(0, 0, 0, .5)
+	}
+	footer nav[role=navigation] {
+		margin: 2em 0 1em
+	}
+	footer nav[role=navigation] ul li {
+		display: inline-block;
+		margin: .5em .75em
+	}
+	footer nav[role=navigation] ul li a {
+		font-size: 1.125em
+	}
+	.blog main h1,
+	.post-type-archive-wine main h1,
+	.page-template-page-wines main h1 {
+		font-size: 2em
+	}
+	.home main>section {
+		box-sizing: border-box;
+		border-left: solid .5em #231f20;
+		border-right: solid .5em #231f20
+	}
+	.home main>section .intro h1 {
+		letter-spacing: .125em;
+		font-size: 2.75em
+	}
+	.home main>section .intro h1+p {
+		font-size: 1.5em
+	}
+	.home main>section .intro:after {
+		background-position: center -17.7em
+	}
+	.home main>section#welcome .intro h1 {
+		width: 90%
+	}
+	.home main>section#welcome .intro h1+p {
+		max-width: 90%;
+		margin: 0 auto;
+		font-size: 1.5em
+	}
+	.home main>section#the-land {
+		background-size: 110% auto
+	}
+	.home main>section#the-land .intro h1+p {
+		font-size: 1.75em
+	}
+	.home main>section#the-land .intro h1+p+p {
+		max-width: 90%;
+		margin: 1em auto;
+		font-size: 1.35em
+	}
+	.home main>section#the-vines .intro h1+p {
+		max-width: 90%;
+		margin: 0 auto;
+		font-size: 1.35em
+	}
+	.home main>section#the-vines .intro .zoom figcaption table {
+		top: 3.75em;
+		font-size: 1em
+	}
+	.home main>section#the-vines .intro .zoom figcaption table tr td,
+	.home main>section#the-vines .intro .zoom figcaption table tr th {
+		padding: .65em .75em;
+		text-align: left;
+		display: table-cell
+	}
+	.home main>section#the-vines .intro .zoom figcaption table tr th {
+		border-right: dashed 1px #54534a
+	}
+	.home main>section#the-vines .intro .zoom figcaption table thead th {
+		border-right: 0;
+		border-bottom: solid 1px transparent
+	}
+	.home main>section.notice article {
+		padding: 2em 3% 23em
+	}
+	.home main>section.notice article p:first-child {
+		font-size: 1.25em
+	}
+	.press main>section article ul:after,
+	.press main>section article ul:before {
+		display: table;
+		content: '';
+		line-height: 0
+	}
+	.press main>section article ul:after {
+		clear: both
+	}
+	.press main>section article ul li {
+		float: left;
+		width: 50%
+	}
+	.press main>section article ul li:nth-child(odd) {
+		clear: left
+	}
+	.press main>section article ul li>a {
+		min-height: 15em
+	}
+	.press main>section .media-mentions li:nth-child(odd) {
+		border-right: solid 2px #333
+	}
+	.press main>section .posts.wines li:nth-child(2n+2) {
+		clear: none
+	}
+	.press main>section .posts.wines li:nth-child(odd) {
+		clear: left
+	}
+	.press main>section .posts.wines li:first-child {
+		width: 50%
+	}
+}
+@media only screen and (min-width: 768px) {
+	.info:after,
+	.info:before,
+	.subscribe>div:after,
+	.subscribe>div:before {
+		display: table
+	}
+	.info:after,
+	.subscribe>div:after {
+		clear: both
+	}
+	.info:after,
+	.info:before,
+	.subscribe>div:after,
+	.subscribe>div:before,
+	main:after,
+	main:before {
+		line-height: 0;
+		content: ''
+	}
+	.info:after,
+	.info:before,
+	.single-wine main:after,
+	.single-vine main:after,
+	main:after,
+	main:before {
+		content: ''
+	}
+	.subscribe input {
+		padding: 1.25em 1em 1em
+	}
+	.subscribe button {
+		position: relative;
+		top: -1px;
+		width: 10em;
+		padding: .75em 1em
+	}
+	.subscribe>div {
+		width: 35em;
+		margin: 0 auto
+	}
+	.subscribe>div .social {
+		float: left;
+		margin: 1.35em 2em 0 0
+	}
+	.subscribe>div form {
+		float: left;
+		margin: 1em 0 0
+	}
+	.info figure {
+		float: left;
+		clear: none;
+		width: 33.3333%
+	}
+	body>header .logo {
+		display: block;
+		height: 12em;
+		max-width: 100%;
+		margin: 0 auto 2em;
+		text-indent: -9999em;
+		color: transparent;
+		background: url(assets/images/logo-compact-green.png) center center no-repeat;
+		background-size: auto 100%
+	}
+	body>header.collapsable {
+		padding: 5em 1em 5%
+	}
+	body>header.collapsable.collapsed .trigger {
+		left: -4.25em
+	}
+	body>header.collapsable .trigger {
+		width: 4.25em;
+		height: 4.25em;
+		left: -4em
+	}
+	.posts li,
+	.suggestions .posts li:first-child {
+		width: 33.3333%
+	}
+	body>header.collapsable .vcard {
+		display: block
+	}
+	footer {
+		margin: 10em 0 0;
+		padding-bottom: 2em
+	}
+	footer nav[role=navigation] {
+		margin: 3em 0 1em
+	}
+	.posts li:nth-child(2n+2) {
+		clear: none
+	}
+	.posts li:nth-child(3n+2) {
+		clear: left
+	}
+	.posts li:first-child h2 {
+		font-size: 2.5em
+	}
+	.posts li:first-child .card-header {
+		min-height: 28em
+	}
+	.suggestions .posts li:nth-child(2n+1),
+	.suggestions .posts li:nth-child(3n+2) {
+		clear: none
+	}
+	.suggestions .posts li:nth-child(3n+1) {
+		clear: left
+	}
+	.suggestions .posts li:first-child h2 {
+		font-size: 1.75em
+	}
+	.suggestions .posts li .card-content,
+	.suggestions .posts li:first-child .card-content {
+		min-height: 9em
+	}
+	main {
+		max-width: 50em;
+		padding: 7em 0 0
+	}
+	main:after,
+	main:before {
+		display: table
+	}
+	main:after {
+		clear: both
+	}
+	main .blog-title {
+		font-size: 3em
+	}
+	main .blog-title+p {
+		margin: .25em 0 3em
+	}
+	main>article {
+		font-size: 1.125em;
+		padding: 0 2% 8em
+	}
+	main>article h1 {
+		margin: 0 0 1em;
+		line-height: 1.35
+	}
+	main>article p:first-of-type {
+		font-size: 1.065em
+	}
+	main>aside h4 {
+		margin-top: 0;
+		border-bottom: solid 1px #dad5d0;
+		color: #333
+	}
+	main>aside form {
+		margin: 0 0 3em
+	}
+	main>aside form input[type=search] {
+		padding: 0 .5em;
+		width: 75%
+	}
+	main>aside form input[type=submit] {
+		width: 25%
+	}
+	.blog main,
+	.home main,
+	.post-type-archive-wine main,
+	.press main,
+	.weddings main,
+	.page-template-page-wines main {
+		max-width: 100%;
+		margin: 0
+	}
+	.blog main h1,
+	.post-type-archive-wine main h1,
+	.page-template-page-wines main h1 {
+		font-size: 2.5em
+	}
+	.home main>section {
+		border-left: solid 1em #231f20;
+		border-right: solid 1em #231f20;
+		background-size: cover
+	}
+	.home main>section#welcome {
+		background-image: url(assets/images/bg-welcome-tablet.jpg);
+		background-size: auto 90%
+	}
+	.home main>section#the-wine {
+		background-image: url(assets/images/bg-thewine-tablet.jpg)
+	}
+	.home main>section#the-land {
+		background-image: url(assets/images/bg-theland-tablet.jpg)
+	}
+	.home main>section#the-vines {
+		background-image: url(assets/images/bg-thevines-tablet.jpg)
+	}
+	.home main>section.notice {
+		background-color: #0A9AB2;
+		background-image: url(assets/images/bg-notice-tablet.jpg)
+	}
+	.home main>section .intro {
+		position: relative;
+		padding: 12em 3% 0
+	}
+	.home main>section .intro.yield {
+		position: fixed;
+		top: 0;
+		bottom: auto;
+		left: 0;
+		z-index: 5
+	}
+	.home main>section .intro.snapped {
+		position: absolute;
+		top: auto;
+		bottom: 0
+	}
+	.home main>section .intro h1 {
+		font-size: 3.5em
+	}
+	.home main>section#welcome .intro {
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 2em 3%
+	}
+	.home main>section#welcome .intro h1 {
+		width: 95%;
+		max-width: 20em;
+		padding: 0;
+		height: 6em;
+		margin: 3em auto 0;
+		background: url(assets/images/logo.gif) center center no-repeat
+	}
+	.home main>section#welcome .intro h1+p {
+		max-width: 24em;
+		padding: 2em 0 0;
+		font-size: 1.75em;
+		background: url(assets/images/brand-elements.svg) center -2.75em no-repeat;
+		background-size: 9.5625em 12.375em
+	}
+	.home main>section#welcome article h2 {
+		font-size: 1.5em
+	}
+	.home main>section#welcome article p {
+		font-size: 1.125em
+	}
+	.home main>section#welcome article h2+p {
+		padding: 1em;
+		font-size: 1.35em
+	}
+	.home main>section.blockquote .quote {
+		text-align: center
+	}
+	.home main>section.blockquote .quote .quote-player {
+		display: inline-block;
+		text-align: left;
+		min-width: 450px
+	}
+	.home main>section.blockquote .quote .quote-player .play {
+		float: left;
+		margin: .5em 2em 0 0
+	}
+	.home main>section.blockquote .quote .quote-player .title {
+		width: 350px;
+		margin: 0;
+		float: left
+	}
+	.home main>section.blockquote .quote .quote-player .title h1,
+	.home main>section.blockquote .quote .quote-player .title h1+h2 {
+		margin: 0 0 .25em
+	}
+	.home main>section.blockquote .quote .quote-player .title h1 cite {
+		display: inline;
+		width: auto;
+		white-space: nowrap
+	}
+	.home main>section.blockquote .quote .quote-player .title h2+a {
+		padding-left: 0
+	}
+	.home main>section#the-wine .intro h1 {
+		margin: -.5em 0 .75em
+	}
+	.home main>section#the-wine .intro p {
+		font-size: 1.25em
+	}
+	.home main>section#the-wine .intro .button {
+		margin: 7em 0 0
+	}
+	.home main>section#the-land article p:first-child,
+	.home main>section#the-name article p:first-child {
+		margin: 0 0 1em
+	}
+	.home main>section#the-land {
+		background-size: auto 90%
+	}
+	.home main>section#the-land .intro h1+p+p {
+		font-size: 1.5em;
+		max-width: 20em
+	}
+	.home main>section#the-land article {
+		text-align: left
+	}
+	.home main>section#the-name .intro h1+p {
+		padding: 2em 0 0;
+		font-size: 1.75em;
+		background: url(assets/images/brand-elements.svg) center -7.75em no-repeat;
+		background-size: 9.5625em 12.375em
+	}
+	.home main>section#the-name article {
+		background: 0 0
+	}
+	.home main>section#the-name .logo-breakdown {
+		position: relative;
+		width: 720px;
+		margin: 0 auto
+	}
+	.home main>section#the-name .logo-breakdown h2 {
+		margin: 1.5em 0;
+		font-size: 1.5em
+	}
+	.home main>section#the-name .logo-breakdown .full-logo {
+		width: 720px;
+		height: 220px;
+		-ms-transform: scale(1);
+		transform: scale(1);
+		margin: 0
+	}
+	.home main>section#the-name .logo-breakdown .full-logo cirle,
+	.home main>section#the-name .logo-breakdown .full-logo g,
+	.home main>section#the-name .logo-breakdown .full-logo path,
+	.home main>section#the-name .logo-breakdown .full-logo rect {
+		transition: all 3s ease-out
+	}
+	.home main>section#the-name .logo-breakdown #butterfly,
+	.home main>section#the-name .logo-breakdown #fleur-de-lis,
+	.home main>section#the-name .logo-breakdown #may-flower,
+	.home main>section#the-name .logo-breakdown #thistle,
+	.home main>section#the-name .logo-breakdown #wine-leaves {
+		display: inline
+	}
+	.home main>section#the-name .logo-breakdown.activated #may-flower {
+		-ms-transform: translate(22em, 2em) scale(4);
+		transform: translate(22em, 2em) scale(4)
+	}
+	.home main>section#the-name .logo-breakdown.activated #fleur-de-lis {
+		-ms-transform: translate(52em, 58em) scale(2.5);
+		transform: translate(52em, 58em) scale(2.5)
+	}
+	.home main>section#the-name .logo-breakdown.activated #wine-leaves {
+		-ms-transform: translate(55em, 41em) scale(1.75);
+		transform: translate(55em, 41em) scale(1.75)
+	}
+	.home main>section#the-name .logo-breakdown.activated #thistle {
+		-ms-transform: translate(-45em, -27em) scale(2) rotate(-35deg);
+		transform: translate(-45em, -27em) scale(2) rotate(-35deg)
+	}
+	.home main>section#the-name .logo-breakdown.activated #butterfly {
+		-ms-transform: translate(-64em, 20em) scale(3);
+		transform: translate(-64em, 20em) scale(3)
+	}
+	.home main>section#the-name .logo-breakdown.activated #core circle,
+	.home main>section#the-name .logo-breakdown.activated #core path,
+	.home main>section#the-name .logo-breakdown.activated #core rect {
+		fill: #a4968a
+	}
+	.home main>section#the-name .logo-breakdown.activated #core-text circle,
+	.home main>section#the-name .logo-breakdown.activated #core-text path,
+	.home main>section#the-name .logo-breakdown.activated #core-text rect,
+	.home main>section#the-name .logo-breakdown.activated #word-mark circle,
+	.home main>section#the-name .logo-breakdown.activated #word-mark path,
+	.home main>section#the-name .logo-breakdown.activated #word-mark rect {
+		fill: #d8d2cd
+	}
+	.home main>section#the-name .logo-breakdown.activated #lines circle,
+	.home main>section#the-name .logo-breakdown.activated #lines path {
+		display: inline;
+		stroke: #55544B
+	}
+	.home main>section#the-name .logo-breakdown.activated ul li {
+		opacity: 1
+	}
+	.home main>section#the-name .logo-breakdown #word-mark circle,
+	.home main>section#the-name .logo-breakdown #word-mark path,
+	.home main>section#the-name .logo-breakdown #word-mark rect {
+		display: inline
+	}
+	.home main>section#the-name .logo-breakdown ul {
+		position: absolute;
+		top: 6.5em;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		-ms-transform: translateZ(0);
+		transform: translateZ(0)
+	}
+	.home main>section#the-name .logo-breakdown ul li {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 12.5em;
+		padding: 0;
+		background: 0 0;
+		transition: all 2s ease-out 2s;
+		opacity: 0;
+		border: 0
+	}
+	.home main>section#the-name .logo-breakdown ul li.thistle {
+		text-align: right;
+		background: 0 0;
+		top: .25em;
+		left: .5em
+	}
+	.home main>section#the-name .logo-breakdown ul li.may-flower {
+		text-align: right;
+		top: 9em;
+		left: -1.75em
+	}
+	.home main>section#the-name .logo-breakdown ul li.wine-leaves {
+		top: 12em;
+		left: 24.25em
+	}
+	.home main>section#the-name .logo-breakdown ul li.butterfly {
+		top: 9.5em;
+		left: 32.75em
+	}
+	.home main>section#the-name .logo-breakdown ul li.fleur-de-lis {
+		top: .35em;
+		left: 30.75em
+	}
+	.home main>section#the-name .logo-breakdown ul+p {
+		text-align: left;
+		margin: 4em 0;
+		font-size: 1.25em
+	}
+	.home main>section#the-name .logo-breakdown ul+p .ampersand {
+		float: left;
+		margin: 1em 1em 1em 0
+	}
+	.home main>section#the-vines {
+		background-size: auto 90%
+	}
+	.home main>section#the-vines .intro:before {
+		opacity: .15
+	}
+	.home main>section#the-vines .intro h1+p {
+		max-width: 20em;
+		font-size: 1.5em;
+		margin: 1.5em auto 0
+	}
+	.home main>section#the-vines .intro .zoom figcaption {
+		max-width: 32em;
+		top: 10%;
+		height: 40em;
+		margin: 0 auto
+	}
+	.home main>section#the-vines .intro .zoom figcaption button {
+		top: 80%
+	}
+	.home main>section#the-vines .intro .zoom figcaption table thead tr {
+		border: 0
+	}
+	.home main>section#the-vines article p:first-child {
+		margin: 0 0 1em
+	}
+	.home main>section.notice article {
+		padding: 3em 5% 20em;
+		font-size: 1.125em
+	}
+	.home main>section.notice article .signature img {
+		display: inline-block;
+		max-width: 400px
+	}
+	.press main>section article ul li {
+		width: 33.3333%
+	}
+	.press main>section article ul li:nth-child(odd) {
+		clear: none
+	}
+	.press main>section .posts.wines li:nth-child(3n+1),
+	.press main>section article ul li:nth-child(3n+1) {
+		clear: left
+	}
+	.press main>section article ul li>a {
+		min-height: 14em
+	}
+	.press main>section .intro {
+		min-height: 28em
+	}
+	.press main>section#press-intro .intro {
+		min-height: 32em;
+		background-image: url(assets/images/bg-press-tablet.jpg)
+	}
+	.press main>section#press-intro .intro h1 {
+		width: 95%;
+		max-width: 20em;
+		padding: 0;
+		height: 6em;
+		margin: 0 auto;
+		background: url(assets/images/logo.gif) center center no-repeat
+	}
+	.press main>section#press-intro .intro h1+p {
+		margin: .75em 0 0;
+		padding: 1.5em 0 0;
+		font-size: 1.75em;
+		background: url(assets/images/brand-elements.svg) center -2.5em no-repeat;
+		background-size: 8.128125em 10.51875em
+	}
+	.press main>section#press-intro article {
+		padding: 4em 3% 5em
+	}
+	.press main>section#press-intro article>div {
+		max-width: 800px;
+		margin: 0 auto
+	}
+	.press main>section#media-mentions .intro {
+		background-image: url(assets/images/bg-theland-tablet.jpg)
+	}
+	.press main>section#the-wine .intro {
+		background-image: url(assets/images/bg-presswine-tablet.jpg)
+	}
+	.press main>section#the-brand .intro {
+		background-image: url(assets/images/bg-thebrand-tablet.jpg)
+	}
+	.press main>section#the-photos .intro {
+		background-image: url(assets/images/bg-thephotos-tablet.jpg)
+	}
+	.press main>section#the-team .intro {
+		background-image: url(assets/images/bg-theteam-tablet.jpg)
+	}
+	.press main>section .media-mentions li {
+		border: none;
+		padding: 3em 1.5em
+	}
+	.press main>section .media-mentions li:nth-child(3n+3),
+	.press main>section .media-mentions li:nth-child(odd) {
+		border-right: none
+	}
+	.press main>section .media-mentions li a {
+		min-height: 6em
+	}
+	.press main>section .posts.wines li:nth-child(odd) {
+		clear: none
+	}
+	.press main>section .posts.wines li:first-child {
+		width: 33.3333%
+	}
+	.press main>section#the-brand article ul li {
+		border: 0;
+		border-left: solid 2px #f0f0f0
+	}
+	.press main>section#the-brand article ul li a {
+		min-height: 14em
+	}
+	.press main>section#the-brand article ul li a:before {
+		height: 14em
+	}
+	.press main>section#the-brand article ul li img {
+		max-height: 8em
+	}
+	.press main>section#the-team article a {
+		min-height: 16em
+	}
+	.weddings header {
+		margin: 0 0 2em
+	}
+	.weddings header h1 {
+		top: 77%;
+		background: #FFF;
+		width: 60%;
+		max-width: 18em;
+		margin: 0 auto;
+		padding: 1em 0
+	}
+	.weddings header .links {
+		text-align: right
+	}
+	.weddings main section {
+		margin: 0 auto
+	}
+	.weddings main section#weddings-intro p {
+		padding: 1em 4em;
+		font-size: 1.35em;
+		color: #231f20
+	}
+	.weddings main section#weddings-description p {
+		font-size: 1.125em
+	}
+	.weddings main section#weddings-photos {
+		max-width: 100%;
+		padding: 0
+	}
+	.weddings main section#weddings-photos p {
+		-ms-flex-direction: row;
+		flex-direction: row
+	}
+	.weddings main section#weddings-photos p img {
+		width: 33.333%;
+		-ms-flex-item-align: center;
+		align-self: center
+	}
+	.weddings main section#weddings-package p br {
+		display: inherit
+	}
+	.weddings main section#weddings-package-demo {
+		max-width: 100%;
+		padding: 0;
+		-ms-flex-direction: row;
+		flex-direction: row
+	}
+	.weddings main section#weddings-package-demo p:first-child {
+		width: 32%;
+		padding-right: 3em;
+		text-align: right
+	}
+	.weddings main section#weddings-package-demo p:nth-child(2) {
+		width: 68%;
+		text-align: left
+	}
+	.weddings main section#weddings-package-demo p img {
+		max-width: 80%
+	}
+	.weddings main section#weddings-location-drawing {
+		max-width: 100%;
+		padding: 0
+	}
+	.touch main>section#welcome .intro {
+		position: relative;
+		top: 0;
+		left: 0
+	}
+	.ancienne {
+		position: relative;
+		margin: 0 0 2em
+	}
+	.ancienne figcaption {
+		position: absolute;
+		top: 20%;
+		width: 100%
+	}
+	.ancienne figcaption p {
+		float: left;
+		width: 30%;
+		text-align: right;
+		margin: 1em 0;
+		font-size: 1.125em
+	}
+	.ancienne figcaption p+p {
+		text-align: left;
+		margin: 1em 0 0 40%
+	}
+	.single-wine main, .single-vine main {
+		position: relative;
+		max-width: 100%
+	}
+	.single-wine main:after, .single-vine main:after {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 50em;
+		height: 50em;
+		background: url(assets/images/logo-compact-watermark.svg) 10% 10% no-repeat;
+		background-size: 200%;
+		opacity: .05
+	}
+	.single-wine header, .single-vine header {
+		padding-top: 30%;
+		margin: 0 0 3em
+	}
+	.single-wine header h1, .single-vine header h1 {
+		top: 65%;
+		background: #FFF;
+		width: 60%;
+		max-width: 18em;
+		margin: 0 auto
+	}
+	.single-wine header .links, .single-vine header .links {
+		width: 96%;
+		padding: 1em 2%
+	}
+	.no-svg .social ul li a {
+		background: url(assets/images/sprite.svg) center -6.8em no-repeat #A19589;
+		background-size: 12.5em 41em
+	}
+	.no-svg .social ul li.twitter a {
+		background-position: center -1.8em
+	}
+	.no-svg .social ul li.instagram a {
+		background-position: center -6.6em
+	}
+	.no-svg>header.collapsable .trigger:after {
+		background: url(assets/images/sprite.svg) center -12.9em no-repeat;
+		background-size: 12.5em 41em;
+		height: 3.125em
+	}
+	.no-svg .home main>section#welcome .intro h1 {
+		height: 4em;
+		max-width: 11em;
+		padding: 0;
+		margin: 0 auto;
+		background-image: url(assets/images/logo.gif);
+		background-size: 100% auto
+	}
+	.no-svg .home main>section#the-name .intro h1+p {
+		background: 0 0
+	}
+}
+@media only screen and (min-width: 1025px) {
+	body>header.collapsable {
+		padding: 8% 1em 5%;
+		background: url(assets/images/logo-compact-watermark-green.svg) center 180% no-repeat #231f20;
+		background-size: 50em auto
+	}
+	footer nav[role=navigation] {
+		margin: 2em 0
+	}
+	footer nav[role=navigation] ul li a {
+		display: inline-block;
+		font-size: 1.25em
+	}
+	footer .vcard .adr span {
+		display: inline-block;
+		white-space: nowrap
+	}
+	footer .vcard .adr br {
+		display: none
+	}
+	footer .vcard .adr+.tel {
+		display: inline-block;
+		margin: 0 1em 0 0
+	}
+	footer .vcard .adr+.tel+br {
+		display: none
+	}
+	.posts li:first-child .card-header {
+		min-height: 32em
+	}
+	main {
+		padding: 10em 0 0
+	}
+	main>article {
+		font-size: 1.25em;
+		line-height: 1.65
+	}
+	.blog main h1,
+	.post-type-archive-wine main h1,
+	.page-template-page-wines main h1 {
+		font-size: 3.5em
+	}
+	.home main>section {
+		background-attachment: fixed;
+		border-left-width: 1.25em;
+		border-right-width: 1.25em
+	}
+	.home main>section#welcome {
+		background-image: url(assets/images/bg-welcome.jpg);
+		background-size: cover
+	}
+	.home main>section#the-wine {
+		background-image: url(assets/images/bg-thewine.jpg)
+	}
+	.home main>section#the-land {
+		background-image: url(assets/images/bg-theland.jpg)
+	}
+	.home main>section#the-vines {
+		background-image: url(assets/images/bg-thevines.jpg)
+	}
+	.home main>section.notice {
+		background-color: #069DD4;
+		background-image: url(assets/images/bg-notice.jpg)
+	}
+	.home main>section article div {
+		max-width: 800px;
+		margin: 0 auto
+	}
+	.home main>section#welcome .intro h1 {
+		width: 720px;
+		max-width: 720px;
+		margin: 1.25em auto 0
+	}
+	.home main>section#welcome .intro h1+p {
+		margin: 1em auto 0;
+		background-position: center -3.15em;
+		background-size: 10.923em 14.14em
+	}
+	.home main>section#welcome article {
+		background: url(assets/images/logo-desktop-watermark.png) center 9.75em no-repeat fixed #FFF;
+		background-size: 14.2em auto
+	}
+	.home main>section#welcome article:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		background-color: rgba(255, 255, 255, .48);
+		background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .35) 35%, #fff);
+		background-repeat: no-repeat;
+		filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffffff', GradientType=0);
+		z-index: -1
+	}
+	.home main>section.blockquote .quote blockquote {
+		max-width: 800px;
+		margin: 0 auto
+	}
+	.home main>section.blockquote .quote .quote-player {
+		padding: 6em 0
+	}
+	.home main>section#the-land,
+	.home main>section#the-vines,
+	.home main>section#the-wine {
+		background-size: cover
+	}
+	.home main>section#the-land .intro,
+	.home main>section#the-vines .intro,
+	.home main>section#the-wine .intro {
+		padding: 10em 3% 6em
+	}
+	.home main>section#the-land article,
+	.home main>section#the-vines article,
+	.home main>section#the-wine article {
+		padding: 3em 5%;
+		background: rgba(255, 255, 255, .85)
+	}
+	.home main>section#the-land article .columns,
+	.home main>section#the-vines article .columns,
+	.home main>section#the-wine article .columns {
+		margin: 1em 0;
+		-webkit-column-count: 2;
+		-webkit-column-gap: 2em;
+		-moz-column-count: 2;
+		column-count: 2;
+		-moz-column-gap: 2em;
+		column-gap: 2em
+	}
+	.home main>section#the-name .intro h1+p {
+		font-size: 1.5em;
+		margin: 1.5em 0 1em
+	}
+	.home main>section#the-name .logo-breakdown {
+		width: 1024px
+	}
+	.home main>section#the-name .logo-breakdown .full-logo {
+		width: 1024px;
+		height: 400px;
+		-ms-transform: scale(1);
+		transform: scale(1)
+	}
+	.home main>section#the-name .logo-breakdown ul li.thistle {
+		top: 2em;
+		left: 2.5em
+	}
+	.home main>section#the-name .logo-breakdown ul li.may-flower {
+		top: 18em;
+		left: -1.25em
+	}
+	.home main>section#the-name .logo-breakdown ul li.wine-leaves {
+		top: 22.5em;
+		left: 34.5em
+	}
+	.home main>section#the-name .logo-breakdown ul li.butterfly {
+		top: 19em;
+		left: 49.5em
+	}
+	.home main>section#the-name .logo-breakdown ul li.fleur-de-lis {
+		top: 2em;
+		left: 46.25em
+	}
+	.home main>section#the-name .logo-breakdown ul+p .ampersand {
+		margin: 0 1.5em 1em 0
+	}
+	.home main>section#the-vines .intro .zoom figcaption {
+		max-width: 42em;
+		top: 15%;
+		height: 41.5em
+	}
+	.home main>section#the-vines .intro .zoom figcaption table {
+		top: 3.5em;
+		font-size: 1.05em
+	}
+	.home main>section.notice {
+		background-position: center 80%;
+		background-attachment: scroll;
+		background-size: cover
+	}
+	.press main>section .intro {
+		min-height: 35em
+	}
+	.press main>section .intro h1+p {
+		font-size: 1.5em
+	}
+	.press main>section article ul li {
+		width: 33.3333%
+	}
+	.press main>section article ul li:nth-child(odd) {
+		clear: none
+	}
+	.press main>section article ul li:nth-child(3n+1) {
+		clear: left
+	}
+	.press main>section article ul li>a {
+		min-height: 14em
+	}
+	.press main>section#press-intro .intro {
+		min-height: 40em;
+		background-image: url(assets/images/bg-press.jpg)
+	}
+	.press main>section#media-mentions .intro {
+		background-image: url(assets/images/bg-theland.jpg)
+	}
+	.press main>section#the-wine .intro {
+		background-image: url(assets/images/bg-presswine.jpg)
+	}
+	.press main>section#the-brand .intro {
+		background-image: url(assets/images/bg-thebrand.jpg)
+	}
+	.press main>section#the-photos .intro {
+		background-image: url(assets/images/bg-thephotos.jpg)
+	}
+	.press main>section#the-team .intro {
+		background-image: url(assets/images/bg-theteam.jpg)
+	}
+	.weddings main section {
+		max-width: 800px
+	}
+	.weddings main section#weddings-package-demo p:first-child img {
+		max-height: 380px
+	}
+}
+@media only screen and (min-width: 1280px) {
+	body:not(.home) {
+		padding-right: 320px;
+		box-sizing: border-box
+	}
+	body:not(.home)>header.collapsable.collapsed {
+		right: 0;
+		box-shadow: 0 0 7px 0 rgba(0, 0, 0, .75)
+	}
+	body:not(.home)>header.collapsable .trigger {
+		display: none!important
+	}
+	body.blog main h1,
+	body.post-type-archive-wine main h1,
+	body.page-template-page-wines main h1 {
+		width: 100%;
+		padding: 0 420px 0 100px;
+		margin: 1.5em 0 0;
+		box-sizing: border-box
+	}
+}
+@media only screen and (min-width: 1750px) {
+	.weddings main section {
+		max-width: 800px
+	}
+	.weddings main section#weddings-package-demo p:first-child {
+		width: 35%
+	}
+	.weddings main section#weddings-package-demo p:nth-child(2) {
+		width: 65%
+	}
+}
+@media only screen and (max-height: 768px) {
+	body>header.collapsable {
+		padding: 5em 1em;
+		background-image: none
+	}
+	body>header.collapsable .vcard {
+		display: none
+	}
+	.home main>section#welcome .intro h1 {
+		margin: 0 auto
+	}
+	.home main>section#welcome article {
+		background: url(assets/images/logo-desktop-watermark.png) center 2.4em no-repeat fixed #FFF;
+		background-size: 45.1em auto
+	}
+}
+@media only screen and (max-width: 768px) and (max-height: 768px) {
+	.home main>section#welcome .intro h1 {
+		margin: -10% auto 0
+	}
+}
+.ie body {
+	opacity: .9999
+}
+.ie .subscribe {
+	position: relative;
+	left: 0;
+	opacity: 1
+}
+.ie .subscribe input {
+	max-width: 500px
+}
+.ie .subscribe .social ul li a {
+	background-color: #A19589;
+	opacity: 1
+}
+.ie .info figure {
+	width: 33%
+}
+.ie main>section {
+	overflow: hidden;
+	border: 0
+}
+.ie main>section#welcome .intro {
+	position: absolute
+}
+.ie main>section#the-vines .intro .zoom {
+	display: none
+}
+@media print {
+	blockquote,
+	img,
+	pre,
+	tr {
+		page-break-inside: avoid
+	}
+	* {
+		background: 0 0!important;
+		color: #000!important;
+		box-shadow: none!important;
+		text-shadow: none!important;
+		-webkit-filter: none!important;
+		filter: none!important;
+		-ms-filter: none!important
+	}
+	a,
+	a:visited {
+		text-decoration: underline
+	}
+	a[href]:after {
+		content: " (" attr(href)")"
+	}
+	abbr[title]:after {
+		content: " (" attr(title)")"
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content: ""
+	}
+	blockquote,
+	pre {
+		border: 1px solid #999
+	}
+	thead {
+		display: table-header-group
+	}
+	img {
+		max-width: 100%!important
+	}
+	@page{margin:.5cm}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}aside,footer,header{display:none;visibility:hidden}}#default-page{padding-top:0}#default-page .button,
+	#default-page button {
+		display: inline-block;
+		padding: .5em 1.5em;
+		background: #FFF;
+		border: 1px solid #333;
+		color: #333;
+		box-sizing: border-box;
+		font-family: proxima-nova, Arial, sans-serif;
+		text-transform: uppercase;
+		letter-spacing: .05em;
+		text-decoration: none;
+		line-height: 1.5
+	}
+	#default-page .button:visited,
+	#default-page button:visited {
+		color: #333
+	}
+	#default-page .button:focus,
+	#default-page .button:hover,
+	#default-page button:focus,
+	#default-page button:hover {
+		color: #A19589
+	}
+	#default-page .button:focus,
+	#default-page button:focus {
+		outline: #A19589 dotted 1px
+	}
+	#default-page .button:active,
+	#default-page button:active {
+		box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, .75)
+	}
+	#default-page .button.white,
+	#default-page button.white {
+		border-color: #FFF;
+		border-width: 2px;
+		color: #FFF;
+		font-weight: 700;
+		background: 0 0
+	}
+	#default-page .button.white:visited,
+	#default-page button.white:visited {
+		color: #FFF
+	}
+	#default-page .button.white:hover,
+	#default-page button.white:hover {
+		background: #FFF;
+		color: #4b4c44;
+		text-shadow: none
+	}
+	#default-page h1+h2.subheading__title {
+		margin-top: 0
+	}
+	#default-page .subheading__title {
+		position: relative;
+		margin: 4rem 0 1rem;
+		font-size: 1.5em;
+		line-height: 1.25;
+		font-family: clavo, Georgia, serif
+	}
+	#card-page .main__title,
+	#card-suggestions .main__title,
+	#default-page .main__title {
+		text-shadow: none;
+		margin: 0 auto;
+		padding: 3em 0 2em;
+		font-size: 1.5em;
+		letter-spacing: .125em;
+		color: #4b4c44;
+		position: relative;
+		text-transform: uppercase;
+		text-align: center
+	}
+	#default-page .main__title {
+		line-height: 1
+	}
+	#card-page,
+	#card-suggestions {
+		background: #FFF
+	}
+	#card-page .main__title,
+	#card-suggestions .main__title {
+		line-height: 1
+	}
+	#card-page .card,
+	#card-suggestions .card {
+		position: relative;
+		margin: 0 0 1.438em;
+		width: 23em;
+		max-width: 100%;
+		font-family: proxima-nova, Arial, sans-serif;
+		background: #FFF
+	}
+	#card-page .buy__here h2,
+	#card-page .card__title,
+	#card-suggestions .buy__here h2,
+	#card-suggestions .card__title {
+		font-family: clavo, Georgia, serif
+	}
+	#card-page .card__container,
+	#card-suggestions .card__container {
+		list-style: none;
+		padding: 0;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+		-ms-flex-pack: center;
+		justify-content: center;
+		position: relative;
+		margin: 0 auto 6em;
+		max-width: 100%
+	}
+	#card-page .card__container--link,
+	#card-suggestions .card__container--link {
+		text-indent: -9999em;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		box-shadow: 0 11px 64px rgba(0, 0, 0, .04), 0 7px 18px rgba(0, 0, 0, .03), 0 2px 6px rgba(0, 0, 0, .02);
+		transition: box-shadow .5s
+	}
+	#card-page .card__container--link:focus,
+	#card-page .card__container--link:hover,
+	#card-suggestions .card__container--link:focus,
+	#card-suggestions .card__container--link:hover {
+		outline: 0;
+		box-shadow: 0 18px 120px rgba(0, 0, 0, .1), 0 15px 42px rgba(0, 0, 0, .08), 0 5px 18px rgba(0, 0, 0, .04)
+	}
+	#card-page .card__container--link:active,
+	#card-suggestions .card__container--link:active {
+		transition-duration: .1s;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, .05), 0 4px 12px rgba(0, 0, 0, .04), 0 1px 4px rgba(0, 0, 0, .03)
+	}
+	#card-page .card__container--link,
+	#card-page .card__container--link:visited,
+	#card-suggestions .card__container--link,
+	#card-suggestions .card__container--link:visited {
+		color: inherit
+	}
+	#card-page .card__image,
+	#card-suggestions .card__image {
+		position: relative;
+		height: 12em;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-position: 0 50%;
+		background-size: cover
+	}
+	#card-page .card__content,
+	#card-suggestions .card__content {
+		position: relative;
+		padding: 1.75em 1.5em
+	}
+	#card-page .card__date,
+	#card-suggestions .card__date {
+		position: relative;
+		margin: .125em 0;
+		font-size: .875em;
+		line-height: 1;
+		text-transform: uppercase;
+		opacity: .7
+	}
+	#card-page .card__title,
+	#card-suggestions .card__title {
+		position: relative;
+		margin: .25rem 0 1rem;
+		font-size: 1.5em;
+		line-height: 1.25
+	}
+	#card-page .card__excerpt p,
+	#card-suggestions .card__excerpt p {
+		position: relative;
+		margin: 0;
+		font-size: 1.125em
+	}
+	#card-page .buy__here ul,
+	#card-suggestions .buy__here ul {
+		/* margin: 0;
+		padding: 0; */
+		list-style: none
+	}
+	#card-page .buy__here ul li,
+	#card-suggestions .buy__here ul li {
+		margin: .25rem 0 1rem;
+		font-size: 1.25em;
+		line-height: 1.25;
+		font-family: clavo, Georgia, serif;
+		text-align: center
+	}
+	.svg-container {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 1.5625em;
+		height: 1.125em;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%)
+	}
+	.svg-container svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		fill: none;
+		stroke-width: 3;
+		stroke: #A19589;
+		-ms-transform-origin: center;
+		transform-origin: center;
+		transition: opacity .15s, transform .2s;
+		transition-timing-function: cubic-bezier(1, .5, .8, 1.3)
+	}
+	.svg-container .top {
+		transform: rotateZ(45deg) translate3d(0, 7px, 0)
+	}
+	.svg-container .middle {
+		opacity: 0;
+		transform: translate3d(200%, 0, 0)
+	}
+	.svg-container .bottom {
+		transform: rotateZ(-45deg) translate3d(0, -7px, 0)
+	}
+	.collapsed .svg-container .middle {
+		opacity: 1
+	}
+	.collapsed .svg-container .bottom,
+	.collapsed .svg-container .middle,
+	.collapsed .svg-container .top {
+		transform: translate3d(0, 0, 0)
+	}
+	[href="#navigation"] {
+		-webkit-tap-highlight-color: transparent
+	}
+	@media (min-width: 38em) {
+		#card-page .main__title, #default-page .main__title {
+			max-width: 100%;
+			font-size: 3.5em;
+			padding: 1.5em 0 1em
+		}
+		#card-page {
+			background: url(assets/images/logo-compact-watermark-opacity.svg) 29em 41em no-repeat #FFF;
+			background-size: 107em
+		}
+		#card-page .buy__here ul li {
+			font-size: 1.5em
+		}
+		#card-page .card,
+		#card-suggestions .card {
+			margin: 1.438em
+		}
+	}
+	@media (min-width: 64em) {
+		#card-suggestions {
+			margin: 0 -12%
+		}
+		.svg-container .bottom {
+			transform: rotateZ(-45deg) translate3d(-1px, -7px, 0)
+		}
+	}
+	@media (min-width: 102em) {
+		#card-page .main__title, #card-suggestions .main__title, #default-page .main__title {
+			padding: 2em 0 1.5em
+		}
+		#card-page .card__content,
+		#card-suggestions .card__content {
+			padding: 1.875em 1.75em
+		}
+		#card-page .card__container,
+		#card-suggestions .card__container {
+			padding: 0 1.438em;
+			max-width: 77.875em
+		}
+		#card-page .card__container {
+			-ms-flex-pack: start;
+			justify-content: flex-start
+		}
+		#card-suggestions .card__container {
+			-ms-flex-pack: center;
+			justify-content: center
+		}
+		#card-suggestions {
+			margin: 0 -31%
+		}
+		.press main>section#the-team article ul li a {
+			min-height: 18em
+		}
+	}
+	
