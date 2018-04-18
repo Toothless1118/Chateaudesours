@@ -1426,7 +1426,7 @@ body.press {
 	padding: 0 0 75%;
 	text-indent: -9999em;
 	color: transparent;
-	background: url(assets/images/logo-compact-white.svg) center center no-repeat;
+	background: url(assets/images/logo-main.png) center center no-repeat;
 	background-size: 95% auto
 }
 .home main>section#welcome .intro h1+p {
@@ -2019,7 +2019,7 @@ body.press {
 	padding: 0 0 6em;
 	text-indent: -9999em;
 	color: transparent;
-	background: url(assets/images/logo-compact-white.svg) center center no-repeat;
+	background: url(assets/images/logo-main.png) center center no-repeat;
 	background-size: 95% auto
 }
 .press main>section .media-mentions,
