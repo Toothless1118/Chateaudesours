@@ -2819,7 +2819,7 @@ body.press {
 		margin: 0 auto 2em;
 		text-indent: -9999em;
 		color: transparent;
-		background: url(assets/images/logo-compact-green.png) center center no-repeat;
+		background: url(assets/images/logo-sidebar.png) center center no-repeat;
 		background-size: auto 100%
 	}
 	body>header.collapsable {
@@ -2983,13 +2983,14 @@ body.press {
 		padding: 0;
 		height: 6em;
 		margin: 3em auto 0;
-		background: url(assets/images/logo.gif) center center no-repeat
+		background: url(assets/images/logo-main.png) center center no-repeat;
+		background-size: contain;
 	}
 	.home main>section#welcome .intro h1+p {
 		max-width: 24em;
 		padding: 2em 0 0;
 		font-size: 1.75em;
-		background: url(assets/images/brand-elements.svg) center -2.75em no-repeat;
+		/* background: url(assets/images/brand-elements.svg) center -2.75em no-repeat; */
 		background-size: 9.5625em 12.375em
 	}
 	.home main>section#welcome article h2 {
@@ -3538,8 +3539,8 @@ body.press {
 		background-size: 10.923em 14.14em
 	}
 	.home main>section#welcome article {
-		background: url(assets/images/logo-desktop-watermark.png) center 9.75em no-repeat fixed #FFF;
-		background-size: 14.2em auto
+		background: url(assets/images/logo-desktop-watermark.png) center 6.75em no-repeat fixed #FFF;
+		background-size: 26.2em auto
 	}
 	.home main>section#welcome article:before {
 		content: '';
